@@ -1,619 +1,189 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPL Liga - Swish Tracker</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<script>
+// Hämta automatiskt FPL-data från JSON-fil
+let gameweekResults = {};
+let players = [];
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .header h1 {
-            color: #37003c;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .card h2 {
-            color: #37003c;
-            margin-bottom: 20px;
-            font-size: 1.4em;
-            border-bottom: 2px solid #00ff87;
-            padding-bottom: 10px;
-        }
-
-        .summary-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .stat-box {
-            background: linear-gradient(135deg, #00ff87, #60efff);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0,255,135,0.3);
-        }
-
-        .stat-box h3 {
-            font-size: 2em;
-            margin-bottom: 5px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .stat-box p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        .gameweek-table {
-            overflow-x: auto;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        th {
-            background: linear-gradient(135deg, #37003c, #4a0e4e);
-            color: white;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85em;
-            letter-spacing: 0.5px;
-        }
-
-        .player-name {
-            text-align: left !important;
-            font-weight: 600;
-            color: #37003c;
-        }
-
-        .last-place {
-            background-color: #ffebee;
-            color: #c62828;
-            font-weight: bold;
-        }
-
-        .points {
-            font-weight: 600;
-            color: #2e7d32;
-        }
-
-        .leaderboard {
-            background: white;
-        }
-
-        .leaderboard-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            margin-bottom: 10px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .leaderboard-item:hover {
-            background: #e3f2fd;
-            transform: translateX(5px);
-        }
-
-        .leaderboard-item.top-payer {
-            background: linear-gradient(135deg, #ffcdd2, #f8bbd9);
-            border-left: 4px solid #e91e63;
-        }
-
-        .player-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .position {
-            background: #37003c;
-            color: white;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .swish-amount {
-            background: #00ff87;
-            color: #37003c;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            box-shadow: 0 3px 10px rgba(0,255,135,0.3);
-        }
-
-        .add-result-form {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-group select, .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            background: rgba(255,255,255,0.9);
-            color: #333;
-        }
-
-        .btn {
-            background: #00ff87;
-            color: #37003c;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,255,135,0.3);
-        }
-
-        .btn:hover {
-            background: #00e676;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,255,135,0.4);
-        }
-
-        .upcoming {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #81c784, #aed581);
-            color: white;
-            border-radius: 15px;
-        }
-
-        .upcoming h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-
-        .api-status {
-            background: linear-gradient(135deg, #4fc3f7, #29b6f6);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .refresh-btn {
-            background: #ff9800;
-            margin-left: 10px;
-            padding: 8px 16px;
-            font-size: 0.9em;
-        }
-
-        .refresh-btn:hover {
-            background: #f57c00;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            table {
-                font-size: 0.9em;
-            }
-            
-            th, td {
-                padding: 8px 6px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🏆 FPL Liga - Swish Tracker</h1>
-            <p>Håller koll på vem som swishar mest till kassören!</p>
-        </div>
-
-        <div class="api-status" id="apiStatus">
-            ⚡ Redo för automatisk datahämtning - Ange Liga-ID för att komma igång!
-            <button class="btn refresh-btn" onclick="refreshData()">🔄 Uppdatera Data</button>
-        </div>
-
-        <div class="summary-stats">
-            <div class="stat-box">
-                <h3 id="totalSwish">120</h3>
-                <p>Totalt inswishat (kr)</p>
-            </div>
-            <div class="stat-box">
-                <h3 id="completedRounds">4</h3>
-                <p>Genomförda omgångar</p>
-            </div>
-            <div class="stat-box">
-                <h3 id="remainingRounds">34</h3>
-                <p>Omgångar kvar</p>
-            </div>
-        </div>
-
-        <div class="stats-grid">
-            <div class="card">
-                <h2>💸 Swish Leaderboard</h2>
-                <div class="leaderboard" id="leaderboard">
-                    <!-- Leaderboard genereras av JavaScript -->
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>📊 Omgångshistorik</h2>
-                <div class="gameweek-table">
-                    <table id="historyTable">
-                        <thead>
-                            <tr>
-                                <th>Spelare</th>
-                                <th>GW1</th>
-                                <th>GW2</th>
-                                <th>GW3</th>
-                                <th>GW4</th>
-                                <th>Totalt Swish</th>
-                            </tr>
-                        </thead>
-                        <tbody id="historyTableBody">
-                            <!-- Tabelldata genereras av JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🔮 Kommande Omgångar</h2>
-            <div class="upcoming">
-                <h3>Gameweek 5 - 18 september</h3>
-                <p>Nästa deadline: 16 september 18:30</p>
-            </div>
-        </div>
-
-        <div class="add-result-form">
-            <h2>⚙️ Konfiguration</h2>
-            <div class="form-group">
-                <label for="leagueId">Liga-ID (från er FPL-liga URL):</label>
-                <input type="text" id="leagueId" placeholder="t.ex. 314159" value="1882708">
-            </div>
-            <div class="form-group">
-                <label for="gameweek">Lägg till manuellt resultat - Gameweek:</label>
-                <select id="gameweek">
-                    <option value="5">Gameweek 5</option>
-                    <option value="6">Gameweek 6</option>
-                    <option value="7">Gameweek 7</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="lastPlace">Vem kom sist:</label>
-                <select id="lastPlace">
-                    <option value="">Välj spelare...</option>
-                </select>
-            </div>
-            <button class="btn" onclick="saveLeagueId()">💾 Spara Liga-ID</button>
-            <button class="btn" onclick="addResult()">➕ Lägg till resultat</button>
-        </div>
-    </div>
-
-    <script>
-        // Spelarna i ligan med rätta namn
-        const players = [
-            'August', 'The Big Nerd', 'Elias', 'Oscar', 'Samuel', 
-            'Anton', 'Sebastian', 'Fredrik', 'Jakob'
-        ];
-
-        // Team-ID mapping (kommer fyllas i när Liga-ID anges)
-        let teamIds = {
-            'August': null,
-            'The Big Nerd': null,
-            'Elias': null,
-            'Oscar': null,
-            'Samuel': null,
-            'Anton': null,
-            'Sebastian': null,
-            'Fredrik': null,
-            'Jakob': null
-        };
-
-        // Historisk data med RIKTIGA resultat från er liga
-        let gameweekResults = {
+// Ladda FPL-data automatiskt
+async function loadFPLData() {
+    try {
+        const response = await fetch('fpl-data.json');
+        const data = await response.json();
+        
+        // Uppdatera spelarlista baserat på riktiga namn
+        players = data.standings.results.map(player => player.player_name);
+        
+        // Beräkna swish baserat på senaste gameweek (vem som kom sist)
+        const currentRank = data.standings.results.sort((a, b) => b.rank - a.rank);
+        const lastPlace = currentRank[currentRank.length - 1].player_name;
+        
+        // Historisk data - behåll din manuella data för GW 1-4
+        gameweekResults = {
             1: { 
                 lastPlace: 'Samuel', 
                 points: { 
-                    'August': 54, 'The Big Nerd': 46, 'Elias': 49, 'Oscar': 57, 'Samuel': 42, 
-                    'Anton': 62, 'Sebastian': 66, 'Fredrik': 46, 'Jakob': 58 
+                    'August Bång': 54, 'Emil Jönsson': 46, 'Elias Håkansson': 49, 'Oscar Jonsson': 57, 'Samuel Rosqvist': 42, 
+                    'Anton Ström': 62, 'Sebastian Bonasoni': 66, 'Fredrik Lillbäck': 46, 'Jakob Hammarström': 58 
                 }
             },
             2: { 
-                lastPlace: 'August', 
+                lastPlace: 'August Bång', 
                 points: { 
-                    'August': 36, 'The Big Nerd': 44, 'Elias': 48, 'Oscar': 38, 'Samuel': 48, 
-                    'Anton': 60, 'Sebastian': 49, 'Fredrik': 72, 'Jakob': 39 
+                    'August Bång': 36, 'Emil Jönsson': 44, 'Elias Håkansson': 48, 'Oscar Jonsson': 38, 'Samuel Rosqvist': 48, 
+                    'Anton Ström': 60, 'Sebastian Bonasoni': 49, 'Fredrik Lillbäck': 72, 'Jakob Hammarström': 39 
                 }
             },
             3: { 
-                lastPlace: 'The Big Nerd', 
+                lastPlace: 'Emil Jönsson', 
                 points: { 
-                    'August': 67, 'The Big Nerd': 24, 'Elias': 48, 'Oscar': 52, 'Samuel': 55, 
-                    'Anton': 46, 'Sebastian': 44, 'Fredrik': 42, 'Jakob': 45 
+                    'August Bång': 67, 'Emil Jönsson': 24, 'Elias Håkansson': 48, 'Oscar Jonsson': 52, 'Samuel Rosqvist': 55, 
+                    'Anton Ström': 46, 'Sebastian Bonasoni': 44, 'Fredrik Lillbäck': 42, 'Jakob Hammarström': 45 
                 }
             },
             4: { 
-                lastPlace: 'Elias', 
+                lastPlace: 'Elias Håkansson', 
                 points: { 
-                    'August': 63, 'The Big Nerd': 91, 'Elias': 59, 'Oscar': 76, 'Samuel': 64, 
-                    'Anton': 70, 'Sebastian': 77, 'Fredrik': 81, 'Jakob': 73 
+                    'August Bång': 63, 'Emil Jönsson': 91, 'Elias Håkansson': 59, 'Oscar Jonsson': 76, 'Samuel Rosqvist': 64, 
+                    'Anton Ström': 70, 'Sebastian Bonasoni': 77, 'Fredrik Lillbäck': 81, 'Jakob Hammarström': 73 
                 }
             }
         };
+        
+        updateAll();
+        document.getElementById('apiStatus').innerHTML = `✅ Data automatiskt uppdaterad från Liga ${data.league.id} - Senast: ${new Date(data.last_updated_data).toLocaleString('sv-SE')}`;
+        
+    } catch (error) {
+        console.error('Kunde inte ladda FPL-data:', error);
+        document.getElementById('apiStatus').innerHTML = '❌ Kunde inte hämta automatisk data - använder manuell data';
+        
+        // Fallback till gamla namn om API misslyckas
+        players = [
+            'August', 'The Big Nerd', 'Elias', 'Oscar', 'Samuel', 
+            'Anton', 'Sebastian', 'Fredrik', 'Jakob'
+        ];
+        updateAll();
+    }
+}
 
-        // Spara Liga-ID
-        function saveLeagueId() {
-            const leagueId = document.getElementById('leagueId').value;
-            if (leagueId) {
-                localStorage.setItem('fpl-league-id', leagueId);
-                document.getElementById('apiStatus').innerHTML = `🎯 Liga-ID sparad: ${leagueId} - Klicka "Uppdatera Data" för att hämta senaste resultaten!`;
-                alert(`Liga-ID ${leagueId} sparad! Nu kan du hämta automatisk data.`);
-            } else {
-                alert('Ange ett giltigt Liga-ID först!');
-            }
+// Resten av funktionerna (behåll som de var)
+function calculateSwishStats() {
+    const swishCount = {};
+    players.forEach(player => swishCount[player] = 0);
+    
+    Object.values(gameweekResults).forEach(gw => {
+        if (gw.lastPlace) {
+            swishCount[gw.lastPlace]++;
         }
+    });
+    
+    return swishCount;
+}
 
-        // Hämta data från FPL API (placeholder - kräver CORS-lösning)
-        async function refreshData() {
-            const leagueId = localStorage.getItem('fpl-league-id') || document.getElementById('leagueId').value;
-            
-            if (!leagueId) {
-                alert('Ange Liga-ID först!');
-                return;
-            }
+function updateLeaderboard() {
+    const swishStats = calculateSwishStats();
+    const sortedPlayers = players.sort((a, b) => swishStats[b] - swishStats[a]);
+    
+    const leaderboardEl = document.getElementById('leaderboard');
+    leaderboardEl.innerHTML = '';
+    
+    sortedPlayers.forEach((player, index) => {
+        const swishAmount = swishStats[player] * 30;
+        const item = document.createElement('div');
+        item.className = `leaderboard-item ${index === 0 && swishAmount > 0 ? 'top-payer' : ''}`;
+        
+        item.innerHTML = `
+            <div class="player-info">
+                <div class="position">${index + 1}</div>
+                <span>${player}</span>
+            </div>
+            <div class="swish-amount">${swishAmount} kr</div>
+        `;
+        
+        leaderboardEl.appendChild(item);
+    });
+}
 
-            document.getElementById('apiStatus').innerHTML = '🔄 Hämtar data från Fantasy Premier League...';
-            
-            try {
-                // Detta är en mockad funktion - i verkligheten krävs en proxy-server för CORS
-                setTimeout(() => {
-                    document.getElementById('apiStatus').innerHTML = `✅ Data uppdaterad från Liga ${leagueId} (Mock-data - för riktigt API krävs backend-server)`;
-                    updateAll();
-                }, 2000);
-                
-            } catch (error) {
-                document.getElementById('apiStatus').innerHTML = '❌ Kunde inte hämta data - kontrollera Liga-ID';
-                console.error('API Error:', error);
-            }
+function updateHistoryTable() {
+    const tbody = document.getElementById('historyTableBody');
+    tbody.innerHTML = '';
+    
+    const swishStats = calculateSwishStats();
+    
+    players.forEach(player => {
+        const row = document.createElement('tr');
+        const totalSwish = swishStats[player] * 30;
+        
+        let rowHTML = `<td class="player-name">${player}</td>`;
+        
+        for (let gw = 1; gw <= 4; gw++) {
+            const points = gameweekResults[gw]?.points[player] || '-';
+            const isLast = gameweekResults[gw]?.lastPlace === player;
+            rowHTML += `<td class="${isLast ? 'last-place' : 'points'}">${points}${isLast ? ' 💸' : ''}</td>`;
         }
+        
+        rowHTML += `<td class="swish-amount"><strong>${totalSwish} kr</strong></td>`;
+        row.innerHTML = rowHTML;
+        tbody.appendChild(row);
+    });
+}
 
-        // Beräkna swish-statistik
-        function calculateSwishStats() {
-            const swishCount = {};
-            players.forEach(player => swishCount[player] = 0);
-            
-            Object.values(gameweekResults).forEach(gw => {
-                if (gw.lastPlace) {
-                    swishCount[gw.lastPlace]++;
-                }
-            });
-            
-            return swishCount;
-        }
+function updateSummaryStats() {
+    const completedRounds = Object.keys(gameweekResults).length;
+    const totalSwish = completedRounds * 30;
+    const remainingRounds = 38 - completedRounds;
+    
+    document.getElementById('totalSwish').textContent = totalSwish;
+    document.getElementById('completedRounds').textContent = completedRounds;
+    document.getElementById('remainingRounds').textContent = remainingRounds;
+}
 
-        // Uppdatera leaderboard
-        function updateLeaderboard() {
-            const swishStats = calculateSwishStats();
-            const sortedPlayers = players.sort((a, b) => swishStats[b] - swishStats[a]);
-            
-            const leaderboardEl = document.getElementById('leaderboard');
-            leaderboardEl.innerHTML = '';
-            
-            sortedPlayers.forEach((player, index) => {
-                const swishAmount = swishStats[player] * 30;
-                const item = document.createElement('div');
-                item.className = `leaderboard-item ${index === 0 && swishAmount > 0 ? 'top-payer' : ''}`;
-                
-                item.innerHTML = `
-                    <div class="player-info">
-                        <div class="position">${index + 1}</div>
-                        <span>${player}</span>
-                    </div>
-                    <div class="swish-amount">${swishAmount} kr</div>
-                `;
-                
-                leaderboardEl.appendChild(item);
-            });
-        }
+function populatePlayerDropdown() {
+    const select = document.getElementById('lastPlace');
+    select.innerHTML = '<option value="">Välj spelare...</option>';
+    players.forEach(player => {
+        const option = document.createElement('option');
+        option.value = player;
+        option.textContent = player;
+        select.appendChild(option);
+    });
+}
 
-        // Uppdatera historiktabell
-        function updateHistoryTable() {
-            const tbody = document.getElementById('historyTableBody');
-            tbody.innerHTML = '';
-            
-            const swishStats = calculateSwishStats();
-            
-            players.forEach(player => {
-                const row = document.createElement('tr');
-                const totalSwish = swishStats[player] * 30;
-                
-                let rowHTML = `<td class="player-name">${player}</td>`;
-                
-                for (let gw = 1; gw <= 4; gw++) {
-                    const points = gameweekResults[gw]?.points[player] || '-';
-                    const isLast = gameweekResults[gw]?.lastPlace === player;
-                    rowHTML += `<td class="${isLast ? 'last-place' : 'points'}">${points}${isLast ? ' 💸' : ''}</td>`;
-                }
-                
-                rowHTML += `<td class="swish-amount"><strong>${totalSwish} kr</strong></td>`;
-                row.innerHTML = rowHTML;
-                tbody.appendChild(row);
-            });
-        }
+function addResult() {
+    const gameweek = document.getElementById('gameweek').value;
+    const lastPlace = document.getElementById('lastPlace').value;
+    
+    if (!lastPlace) {
+        alert('Välj vilken spelare som kom sist!');
+        return;
+    }
+    
+    gameweekResults[parseInt(gameweek)] = {
+        lastPlace: lastPlace,
+        points: {}
+    };
+    
+    updateAll();
+    alert(`Gameweek ${gameweek} tillagd! ${lastPlace} swishar 30 kr.`);
+    
+    document.getElementById('lastPlace').value = '';
+}
 
-        // Uppdatera sammanfattande statistik
-        function updateSummaryStats() {
-            const completedRounds = Object.keys(gameweekResults).length;
-            const totalSwish = completedRounds * 30;
-            const remainingRounds = 38 - completedRounds;
-            
-            document.getElementById('totalSwish').textContent = totalSwish;
-            document.getElementById('completedRounds').textContent = completedRounds;
-            document.getElementById('remainingRounds').textContent = remainingRounds;
-        }
+function updateAll() {
+    updateLeaderboard();
+    updateHistoryTable();
+    updateSummaryStats();
+    populatePlayerDropdown();
+}
 
-        // Populera dropdown med spelare
-        function populatePlayerDropdown() {
-            const select = document.getElementById('lastPlace');
-            players.forEach(player => {
-                const option = document.createElement('option');
-                option.value = player;
-                option.textContent = player;
-                select.appendChild(option);
-            });
-        }
+function saveLeagueId() {
+    alert('Liga-ID är redan konfigurerat för automatisk datahämtning!');
+}
 
-        // Lägg till nytt resultat manuellt
-        function addResult() {
-            const gameweek = document.getElementById('gameweek').value;
-            const lastPlace = document.getElementById('lastPlace').value;
-            
-            if (!lastPlace) {
-                alert('Välj vilken spelare som kom sist!');
-                return;
-            }
-            
-            // Lägg till nytt gameweek-resultat
-            gameweekResults[parseInt(gameweek)] = {
-                lastPlace: lastPlace,
-                points: {} // Poäng kan läggas till senare eller hämtas från API
-            };
-            
-            updateAll();
-            alert(`Gameweek ${gameweek} tillagd! ${lastPlace} swishar 30 kr.`);
-            
-            // Rensa formulär
-            document.getElementById('lastPlace').value = '';
-        }
+function refreshData() {
+    location.reload();
+}
 
-        // Uppdatera allt
-        function updateAll() {
-            updateLeaderboard();
-            updateHistoryTable();
-            updateSummaryStats();
-        }
-
-        // Ladda sparad Liga-ID
-        function loadSavedLeagueId() {
-            const savedLeagueId = localStorage.getItem('fpl-league-id');
-            if (savedLeagueId) {
-                document.getElementById('leagueId').value = savedLeagueId;
-                document.getElementById('apiStatus').innerHTML = `💾 Sparad Liga-ID: ${savedLeagueId} - Klicka "Uppdatera Data" för att hämta senaste resultaten!`;
-            }
-        }
-
-        // Initiera sidan
-        document.addEventListener('DOMContentLoaded', function() {
-            populatePlayerDropdown();
-            loadSavedLeagueId();
-            updateAll();
-        });
-    </script>
-</body>
-</html>
+// Initiera sidan med automatisk datahämtning
+document.addEventListener('DOMContentLoaded', function() {
+    loadFPLData();
+});
+</script>
