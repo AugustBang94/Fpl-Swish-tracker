@@ -421,20 +421,20 @@
             } catch (error) {
                 console.error('❌ Alla API-försök misslyckades:', error);
                 
-                // Absolut fallback
+                // Fallback till senaste kända data med RIKTIGA POÄNG
                 fplData = {
-                    lastUpdated: 'Senaste kända data (offline)',
+                    lastUpdated: 'Riktiga poäng från GW1-4 (manuellt uppdaterat)',
                     currentGameweek: 5,
                     players: [
-                        { name: 'Fredrik Lillbäck', totalPoints: 322, teamName: 'Lil B United', rank: 1, history: [] },
-                        { name: 'Anton Ström', totalPoints: 311, teamName: 'Arnes Army', rank: 2, history: [] },
-                        { name: 'Sebastian Bonasoni', totalPoints: 295, teamName: 'Mudryks monsters', rank: 3, history: [] },
-                        { name: 'Oscar Jonsson', totalPoints: 287, teamName: 'FC Bärsalona', rank: 4, history: [] },
-                        { name: 'August Bång', totalPoints: 283, teamName: 'Club de national', rank: 5, history: [] },
-                        { name: 'Jakob Hammarström', totalPoints: 270, teamName: 'Hammarström FC', rank: 6, history: [] },
-                        { name: 'Samuel Rosqvist', totalPoints: 268, teamName: 'Samlag1', rank: 7, history: [] },
-                        { name: 'Emil Jönsson', totalPoints: 264, teamName: 'McJönnister', rank: 8, history: [] },
-                        { name: 'Elias Håkansson', totalPoints: 259, teamName: 'Hawkansun', rank: 9, history: [] }
+                        { name: 'Fredrik Lillbäck', totalPoints: 241, teamName: 'Lil B United', rank: 1, history: [] },
+                        { name: 'Anton Ström', totalPoints: 238, teamName: 'Arnes Army', rank: 2, history: [] },
+                        { name: 'Sebastian Bonasoni', totalPoints: 236, teamName: 'Mudryks monsters', rank: 3, history: [] },
+                        { name: 'Oscar Jonsson', totalPoints: 223, teamName: 'FC Bärsalona', rank: 4, history: [] },
+                        { name: 'August Bång', totalPoints: 220, teamName: 'Club de national', rank: 5, history: [] },
+                        { name: 'Jakob Hammarström', totalPoints: 215, teamName: 'Hammarström FC', rank: 6, history: [] },
+                        { name: 'Samuel Rosqvist', totalPoints: 209, teamName: 'Samlag1', rank: 7, history: [] },
+                        { name: 'Emil Jönsson', totalPoints: 205, teamName: 'McJönnister', rank: 8, history: [] },
+                        { name: 'Elias Håkansson', totalPoints: 204, teamName: 'Hawkansun', rank: 9, history: [] }
                     ],
                     isLoading: false
                 };
@@ -487,11 +487,11 @@
                 }
             }
             
-            // Fallback - använd känd swish-historik om API-data saknas
+            // Fallback - använd känd swish-historik med RIKTIGA RESULTAT
             const fallbackSwishData = [
-                { gameweek: 1, loser: 'Samuel Rosqvist', points: 45, swishAmount: 30 },
-                { gameweek: 2, loser: 'August Bång', points: 38, swishAmount: 30 },
-                { gameweek: 3, loser: 'Emil Jönsson', points: 42, swishAmount: 30 },
+                { gameweek: 1, loser: 'Samuel Rosqvist', points: 42, swishAmount: 30 },
+                { gameweek: 2, loser: 'August Bång', points: 36, swishAmount: 30 },
+                { gameweek: 3, loser: 'Emil Jönsson', points: 24, swishAmount: 30 },
                 { gameweek: 4, loser: 'Elias Håkansson', points: 59, swishAmount: 30 }
             ];
             
