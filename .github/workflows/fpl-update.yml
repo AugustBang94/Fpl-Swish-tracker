@@ -2,16 +2,23 @@ name: Update FPL Data
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *'
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo "Test workflow" > test.txt
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Test" || exit 0
+      
+      - name: Fetch FPL Data
+        run: |
+          curl -s "https://fantasy.premierleague.com/api/leagues-classic/1882708/standings/" > fpl-data.json
+          
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add fpl-data.json
+          git commit -m "Update FPL data" || exit 0
           git push
