@@ -1,189 +1,178 @@
 <script>
-// Hämta automatiskt FPL-data från JSON-fil
-let gameweekResults = {};
-let players = [];
-
-// Ladda FPL-data automatiskt
-async function loadFPLData() {
-    try {
-        const response = await fetch('fpl-data.json');
-        const data = await response.json();
-        
-        // Uppdatera spelarlista baserat på riktiga namn
-        players = data.standings.results.map(player => player.player_name);
-        
-        // Beräkna swish baserat på senaste gameweek (vem som kom sist)
-        const currentRank = data.standings.results.sort((a, b) => b.rank - a.rank);
-        const lastPlace = currentRank[currentRank.length - 1].player_name;
-        
-        // Historisk data - behåll din manuella data för GW 1-4
-        gameweekResults = {
-            1: { 
-                lastPlace: 'Samuel', 
-                points: { 
-                    'August Bång': 54, 'Emil Jönsson': 46, 'Elias Håkansson': 49, 'Oscar Jonsson': 57, 'Samuel Rosqvist': 42, 
-                    'Anton Ström': 62, 'Sebastian Bonasoni': 66, 'Fredrik Lillbäck': 46, 'Jakob Hammarström': 58 
-                }
-            },
-            2: { 
-                lastPlace: 'August Bång', 
-                points: { 
-                    'August Bång': 36, 'Emil Jönsson': 44, 'Elias Håkansson': 48, 'Oscar Jonsson': 38, 'Samuel Rosqvist': 48, 
-                    'Anton Ström': 60, 'Sebastian Bonasoni': 49, 'Fredrik Lillbäck': 72, 'Jakob Hammarström': 39 
-                }
-            },
-            3: { 
-                lastPlace: 'Emil Jönsson', 
-                points: { 
-                    'August Bång': 67, 'Emil Jönsson': 24, 'Elias Håkansson': 48, 'Oscar Jonsson': 52, 'Samuel Rosqvist': 55, 
-                    'Anton Ström': 46, 'Sebastian Bonasoni': 44, 'Fredrik Lillbäck': 42, 'Jakob Hammarström': 45 
-                }
-            },
-            4: { 
-                lastPlace: 'Elias Håkansson', 
-                points: { 
-                    'August Bång': 63, 'Emil Jönsson': 91, 'Elias Håkansson': 59, 'Oscar Jonsson': 76, 'Samuel Rosqvist': 64, 
-                    'Anton Ström': 70, 'Sebastian Bonasoni': 77, 'Fredrik Lillbäck': 81, 'Jakob Hammarström': 73 
-                }
+// Vänta tills alla HTML-element är laddade
+document.addEventListener('DOMContentLoaded', function() {
+    
+    let gameweekResults = {
+        1: { 
+            lastPlace: 'Samuel Rosqvist', 
+            points: { 
+                'August Bång': 54, 'Emil Jönsson': 46, 'Elias Håkansson': 49, 'Oscar Jonsson': 57, 'Samuel Rosqvist': 42, 
+                'Anton Ström': 62, 'Sebastian Bonasoni': 66, 'Fredrik Lillbäck': 46, 'Jakob Hammarström': 58 
             }
+        },
+        2: { 
+            lastPlace: 'August Bång', 
+            points: { 
+                'August Bång': 36, 'Emil Jönsson': 44, 'Elias Håkansson': 48, 'Oscar Jonsson': 38, 'Samuel Rosqvist': 48, 
+                'Anton Ström': 60, 'Sebastian Bonasoni': 49, 'Fredrik Lillbäck': 72, 'Jakob Hammarström': 39 
+            }
+        },
+        3: { 
+            lastPlace: 'Emil Jönsson', 
+            points: { 
+                'August Bång': 67, 'Emil Jönsson': 24, 'Elias Håkansson': 48, 'Oscar Jonsson': 52, 'Samuel Rosqvist': 55, 
+                'Anton Ström': 46, 'Sebastian Bonasoni': 44, 'Fredrik Lillbäck': 42, 'Jakob Hammarström': 45 
+            }
+        },
+        4: { 
+            lastPlace: 'Elias Håkansson', 
+            points: { 
+                'August Bång': 63, 'Emil Jönsson': 91, 'Elias Håkansson': 59, 'Oscar Jonsson': 76, 'Samuel Rosqvist': 64, 
+                'Anton Ström': 70, 'Sebastian Bonasoni': 77, 'Fredrik Lillbäck': 81, 'Jakob Hammarström': 73 
+            }
+        }
+    };
+
+    const players = [
+        'Fredrik Lillbäck', 'Anton Ström', 'Sebastian Bonasoni', 'Oscar Jonsson', 'August Bång', 
+        'Samuel Rosqvist', 'Jakob Hammarström', 'Emil Jönsson', 'Elias Håkansson'
+    ];
+
+    function calculateSwishStats() {
+        const swishCount = {};
+        players.forEach(player => swishCount[player] = 0);
+        
+        Object.values(gameweekResults).forEach(gw => {
+            if (gw.lastPlace) {
+                swishCount[gw.lastPlace]++;
+            }
+        });
+        
+        return swishCount;
+    }
+
+    function updateLeaderboard() {
+        const swishStats = calculateSwishStats();
+        const sortedPlayers = players.sort((a, b) => swishStats[b] - swishStats[a]);
+        
+        const leaderboardEl = document.getElementById('leaderboard');
+        if (!leaderboardEl) return;
+        
+        leaderboardEl.innerHTML = '';
+        
+        sortedPlayers.forEach((player, index) => {
+            const swishAmount = swishStats[player] * 30;
+            const item = document.createElement('div');
+            item.className = `leaderboard-item ${index === 0 && swishAmount > 0 ? 'top-payer' : ''}`;
+            
+            item.innerHTML = `
+                <div class="player-info">
+                    <div class="position">${index + 1}</div>
+                    <span>${player}</span>
+                </div>
+                <div class="swish-amount">${swishAmount} kr</div>
+            `;
+            
+            leaderboardEl.appendChild(item);
+        });
+    }
+
+    function updateHistoryTable() {
+        const tbody = document.getElementById('historyTableBody');
+        if (!tbody) return;
+        
+        tbody.innerHTML = '';
+        
+        const swishStats = calculateSwishStats();
+        
+        players.forEach(player => {
+            const row = document.createElement('tr');
+            const totalSwish = swishStats[player] * 30;
+            
+            let rowHTML = `<td class="player-name">${player}</td>`;
+            
+            for (let gw = 1; gw <= 4; gw++) {
+                const points = gameweekResults[gw]?.points[player] || '-';
+                const isLast = gameweekResults[gw]?.lastPlace === player;
+                rowHTML += `<td class="${isLast ? 'last-place' : 'points'}">${points}${isLast ? ' 💸' : ''}</td>`;
+            }
+            
+            rowHTML += `<td class="swish-amount"><strong>${totalSwish} kr</strong></td>`;
+            row.innerHTML = rowHTML;
+            tbody.appendChild(row);
+        });
+    }
+
+    function updateSummaryStats() {
+        const completedRounds = Object.keys(gameweekResults).length;
+        const totalSwish = completedRounds * 30;
+        const remainingRounds = 38 - completedRounds;
+        
+        const totalEl = document.getElementById('totalSwish');
+        const completedEl = document.getElementById('completedRounds');
+        const remainingEl = document.getElementById('remainingRounds');
+        
+        if (totalEl) totalEl.textContent = totalSwish;
+        if (completedEl) completedEl.textContent = completedRounds;
+        if (remainingEl) remainingEl.textContent = remainingRounds;
+    }
+
+    function populatePlayerDropdown() {
+        const select = document.getElementById('lastPlace');
+        if (!select) return;
+        
+        select.innerHTML = '<option value="">Välj spelare...</option>';
+        players.forEach(player => {
+            const option = document.createElement('option');
+            option.value = player;
+            option.textContent = player;
+            select.appendChild(option);
+        });
+    }
+
+    function updateAll() {
+        updateLeaderboard();
+        updateHistoryTable();
+        updateSummaryStats();
+        populatePlayerDropdown();
+    }
+
+    // Uppdatera status
+    const statusEl = document.getElementById('apiStatus');
+    if (statusEl) {
+        statusEl.innerHTML = '✅ Visar data med riktiga spelnamn från er FPL-liga!';
+    }
+
+    // Kör alla uppdateringar
+    updateAll();
+
+    // Lägg till event handlers
+    window.addResult = function() {
+        const gameweek = document.getElementById('gameweek').value;
+        const lastPlace = document.getElementById('lastPlace').value;
+        
+        if (!lastPlace) {
+            alert('Välj vilken spelare som kom sist!');
+            return;
+        }
+        
+        gameweekResults[parseInt(gameweek)] = {
+            lastPlace: lastPlace,
+            points: {}
         };
         
         updateAll();
-        document.getElementById('apiStatus').innerHTML = `✅ Data automatiskt uppdaterad från Liga ${data.league.id} - Senast: ${new Date(data.last_updated_data).toLocaleString('sv-SE')}`;
+        alert(`Gameweek ${gameweek} tillagd! ${lastPlace} swishar 30 kr.`);
         
-    } catch (error) {
-        console.error('Kunde inte ladda FPL-data:', error);
-        document.getElementById('apiStatus').innerHTML = '❌ Kunde inte hämta automatisk data - använder manuell data';
-        
-        // Fallback till gamla namn om API misslyckas
-        players = [
-            'August', 'The Big Nerd', 'Elias', 'Oscar', 'Samuel', 
-            'Anton', 'Sebastian', 'Fredrik', 'Jakob'
-        ];
-        updateAll();
-    }
-}
-
-// Resten av funktionerna (behåll som de var)
-function calculateSwishStats() {
-    const swishCount = {};
-    players.forEach(player => swishCount[player] = 0);
-    
-    Object.values(gameweekResults).forEach(gw => {
-        if (gw.lastPlace) {
-            swishCount[gw.lastPlace]++;
-        }
-    });
-    
-    return swishCount;
-}
-
-function updateLeaderboard() {
-    const swishStats = calculateSwishStats();
-    const sortedPlayers = players.sort((a, b) => swishStats[b] - swishStats[a]);
-    
-    const leaderboardEl = document.getElementById('leaderboard');
-    leaderboardEl.innerHTML = '';
-    
-    sortedPlayers.forEach((player, index) => {
-        const swishAmount = swishStats[player] * 30;
-        const item = document.createElement('div');
-        item.className = `leaderboard-item ${index === 0 && swishAmount > 0 ? 'top-payer' : ''}`;
-        
-        item.innerHTML = `
-            <div class="player-info">
-                <div class="position">${index + 1}</div>
-                <span>${player}</span>
-            </div>
-            <div class="swish-amount">${swishAmount} kr</div>
-        `;
-        
-        leaderboardEl.appendChild(item);
-    });
-}
-
-function updateHistoryTable() {
-    const tbody = document.getElementById('historyTableBody');
-    tbody.innerHTML = '';
-    
-    const swishStats = calculateSwishStats();
-    
-    players.forEach(player => {
-        const row = document.createElement('tr');
-        const totalSwish = swishStats[player] * 30;
-        
-        let rowHTML = `<td class="player-name">${player}</td>`;
-        
-        for (let gw = 1; gw <= 4; gw++) {
-            const points = gameweekResults[gw]?.points[player] || '-';
-            const isLast = gameweekResults[gw]?.lastPlace === player;
-            rowHTML += `<td class="${isLast ? 'last-place' : 'points'}">${points}${isLast ? ' 💸' : ''}</td>`;
-        }
-        
-        rowHTML += `<td class="swish-amount"><strong>${totalSwish} kr</strong></td>`;
-        row.innerHTML = rowHTML;
-        tbody.appendChild(row);
-    });
-}
-
-function updateSummaryStats() {
-    const completedRounds = Object.keys(gameweekResults).length;
-    const totalSwish = completedRounds * 30;
-    const remainingRounds = 38 - completedRounds;
-    
-    document.getElementById('totalSwish').textContent = totalSwish;
-    document.getElementById('completedRounds').textContent = completedRounds;
-    document.getElementById('remainingRounds').textContent = remainingRounds;
-}
-
-function populatePlayerDropdown() {
-    const select = document.getElementById('lastPlace');
-    select.innerHTML = '<option value="">Välj spelare...</option>';
-    players.forEach(player => {
-        const option = document.createElement('option');
-        option.value = player;
-        option.textContent = player;
-        select.appendChild(option);
-    });
-}
-
-function addResult() {
-    const gameweek = document.getElementById('gameweek').value;
-    const lastPlace = document.getElementById('lastPlace').value;
-    
-    if (!lastPlace) {
-        alert('Välj vilken spelare som kom sist!');
-        return;
-    }
-    
-    gameweekResults[parseInt(gameweek)] = {
-        lastPlace: lastPlace,
-        points: {}
+        document.getElementById('lastPlace').value = '';
     };
-    
-    updateAll();
-    alert(`Gameweek ${gameweek} tillagd! ${lastPlace} swishar 30 kr.`);
-    
-    document.getElementById('lastPlace').value = '';
-}
 
-function updateAll() {
-    updateLeaderboard();
-    updateHistoryTable();
-    updateSummaryStats();
-    populatePlayerDropdown();
-}
+    window.saveLeagueId = function() {
+        alert('Liga-ID är redan konfigurerat!');
+    };
 
-function saveLeagueId() {
-    alert('Liga-ID är redan konfigurerat för automatisk datahämtning!');
-}
-
-function refreshData() {
-    location.reload();
-}
-
-// Initiera sidan med automatisk datahämtning
-document.addEventListener('DOMContentLoaded', function() {
-    loadFPLData();
+    window.refreshData = function() {
+        location.reload();
+    };
 });
 </script>
