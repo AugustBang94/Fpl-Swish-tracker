@@ -1,0 +1,79 @@
+name: Update FPL Data
+
+on:
+  schedule:
+    # Kör varje dag kl 09:00 UTC (11:00 svensk tid)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Tillåter manuell körning
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Fetch FPL data
+      run: |
+        node -e "
+        const https = require('https');
+        const fs = require('fs');
+        
+        const LEAGUE_ID = '1882708';
+        const API_BASE = 'https://fantasy.premierleague.com/api';
+        
+        async function fetchData(url) {
+          return new Promise((resolve, reject) => {
+            https.get(url, (res) => {
+              let data = '';
+              res.on('data', chunk => data += chunk);
+              res.on('end', () => resolve(JSON.parse(data)));
+              res.on('error', reject);
+            });
+          });
+        }
+        
+        async function main() {
+          try {
+            console.log('Hämtar FPL data...');
+            const league = await fetchData(\`\${API_BASE}/leagues-classic/\${LEAGUE_ID}/standings/\`);
+            const bootstrap = await fetchData(\`\${API_BASE}/bootstrap-static/\`);
+            
+            const currentGW = bootstrap.events.find(event => event.is_current)?.id || 5;
+            
+            const result = {
+              leagueId: LEAGUE_ID,
+              lastUpdated: new Date().toISOString(),
+              currentGameweek: currentGW,
+              standings: league.standings.results.map(manager => ({
+                name: manager.player_name,
+                teamId: manager.entry,
+                totalPoints: manager.total,
+                rank: manager.rank
+              }))
+            };
+            
+            fs.writeFileSync('fpl-data.json', JSON.stringify(result, null, 2));
+            console.log('Data sparad i fpl-data.json');
+          } catch (error) {
+            console.error('Fel:', error);
+            process.exit(1);
+          }
+        }
+        
+        main();
+        "
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add fpl-data.json
+        git commit -m "Uppdatera FPL data automatiskt" || exit 0
+        git push
