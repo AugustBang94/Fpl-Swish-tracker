@@ -1,38 +1,4 @@
-.swish-total {
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .swish-amount-red {
-            color: #ff4757;
-            font-weight: bold;
-        }
-
-        .swish-amount-green {
-            color: #2ed573;
-            font-weight: bold;
-        }
-
-        .has-swished {
-            background-color: rgba(255, 71, 87, 0.05);
-        }        // Beräkna hur mycket varje spelare har swishat totalt
-        function calculatePlayerSwishTotals(swishData) {
-            const swishTotals = {};
-            
-            // Initiera alla spelare med 0 kr
-            Object.values(TEAM_IDS).forEach(name => {
-                swishTotals[name] = 0;
-            });
-            
-            // Räkna ihop swish-belopp för varje spelare
-            swishData.forEach(swish => {
-                if (swishTotals.hasOwnProperty(swish.loser)) {
-                    swishTotals[swish.loser] += swish.swishAmount;
-                }
-            });
-            
-            return swishTotals;
-        }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
@@ -188,6 +154,25 @@
             color: #00b894;
         }
 
+        .swish-total {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .swish-amount-red {
+            color: #ff4757;
+            font-weight: bold;
+        }
+
+        .swish-amount-green {
+            color: #2ed573;
+            font-weight: bold;
+        }
+
+        .has-swished {
+            background-color: rgba(255, 71, 87, 0.05);
+        }
+
         .swish-history {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -311,7 +296,7 @@
                         </tr>
                     </thead>
                     <tbody id="leaderboard">
-                        <tr><td colspan="4" style="text-align: center; padding: 2rem;">Laddar data...</td></tr>
+                        <tr><td colspan="5" style="text-align: center; padding: 2rem;">Laddar data...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -402,15 +387,15 @@
                     lastUpdated: new Date().toLocaleString('sv-SE') + ' (Fallback data)',
                     currentGameweek: currentGW,
                     players: [
-                        { name: 'Fredrik Lillbäck', totalPoints: 322, teamName: 'Lil B United', rank: 1, history: [] },
-                        { name: 'Anton Ström', totalPoints: 311, teamName: 'Arnes Army', rank: 2, history: [] },
-                        { name: 'Sebastian Bonasoni', totalPoints: 295, teamName: 'Mudryks monsters', rank: 3, history: [] },
-                        { name: 'Oscar Jonsson', totalPoints: 287, teamName: 'FC Bärsalona', rank: 4, history: [] },
-                        { name: 'August Bång', totalPoints: 283, teamName: 'Club de national', rank: 5, history: [] },
-                        { name: 'Jakob Hammarström', totalPoints: 270, teamName: 'Hammarström FC', rank: 6, history: [] },
-                        { name: 'Samuel Rosqvist', totalPoints: 268, teamName: 'Samlag1', rank: 7, history: [] },
-                        { name: 'Emil Jönsson', totalPoints: 264, teamName: 'McJönnister', rank: 8, history: [] },
-                        { name: 'Elias Håkansson', totalPoints: 259, teamName: 'Hawkansun', rank: 9, history: [] }
+                        { name: 'Fredrik Lillbäck', totalPoints: 241, teamName: 'Lil B United', rank: 1, history: [] },
+                        { name: 'Anton Ström', totalPoints: 238, teamName: 'Arnes Army', rank: 2, history: [] },
+                        { name: 'Sebastian Bonasoni', totalPoints: 236, teamName: 'Mudryks monsters', rank: 3, history: [] },
+                        { name: 'Oscar Jonsson', totalPoints: 223, teamName: 'FC Bärsalona', rank: 4, history: [] },
+                        { name: 'August Bång', totalPoints: 220, teamName: 'Club de national', rank: 5, history: [] },
+                        { name: 'Jakob Hammarström', totalPoints: 215, teamName: 'Hammarström FC', rank: 6, history: [] },
+                        { name: 'Samuel Rosqvist', totalPoints: 209, teamName: 'Samlag1', rank: 7, history: [] },
+                        { name: 'Emil Jönsson', totalPoints: 205, teamName: 'McJönnister', rank: 8, history: [] },
+                        { name: 'Elias Håkansson', totalPoints: 204, teamName: 'Hawkansun', rank: 9, history: [] }
                     ],
                     isLoading: false
                 };
@@ -421,7 +406,7 @@
             } catch (error) {
                 console.error('❌ Alla API-försök misslyckades:', error);
                 
-                // Fallback till senaste kända data med RIKTIGA POÄNG
+                // Absolut fallback
                 fplData = {
                     lastUpdated: 'Riktiga poäng från GW1-4 (manuellt uppdaterat)',
                     currentGameweek: 5,
