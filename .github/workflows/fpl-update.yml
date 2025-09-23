@@ -2,8 +2,10 @@ name: Update FPL Data
 
 on:
   schedule:
-    # Kör varje dag kl 10:00 UTC (12:00 svensk tid)
-    - cron: '*/30 * * * *'
+    # Var 10:e minut på lördagar och söndagar (matchdagar)
+    - cron: '*/10 * * * 6,0'
+    # Var 30:e minut måndag-fredag
+    - cron: '*/30 * * * 1-5'
   workflow_dispatch: # Tillåter manuell körning
 
 jobs:
