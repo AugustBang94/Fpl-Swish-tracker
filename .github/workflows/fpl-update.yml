@@ -3,7 +3,7 @@ name: Update FPL Data
 on:
   schedule:
     # Kör varje dag kl 10:00 UTC (12:00 svensk tid)
-    - cron: '0 10 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch: # Tillåter manuell körning
 
 jobs:
