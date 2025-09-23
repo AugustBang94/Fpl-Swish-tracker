@@ -1,24 +1,204 @@
 name: Update FPL Data
 
 on:
-  workflow_dispatch:
   schedule:
+    # Kör varje dag kl 10:00 UTC (12:00 svensk tid)
     - cron: '0 10 * * *'
+  workflow_dispatch: # Tillåter manuell körning
 
 jobs:
-  update:
+  update-data:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
       
-      - name: Fetch FPL Data
-        run: |
-          curl -s "https://fantasy.premierleague.com/api/leagues-classic/1882708/standings/" > fpl-data.json
-          
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add fpl-data.json
-          git commit -m "Update FPL data" || exit 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Fetch FPL data
+      run: |
+        # Skapa Node.js script för att hämta FPL data
+        cat > fetch_data.js << 'EOF'
+        const https = require('https');
+        const fs = require('fs');
+        
+        // Team IDs för er liga
+        const TEAM_IDS = {
+          1102453: 'Fredrik Lillbäck',
+          159609: 'Anton Ström', 
+          2571381: 'Sebastian Bonasoni',
+          5475077: 'Oscar Jonsson',
+          2373878: 'August Bång',
+          4000088: 'Samuel Rosqvist',
+          240747: 'Jakob Hammarström',
+          4915802: 'Emil Jönsson',
+          1703536: 'Elias Håkansson'
+        };
+        
+        async function fetchData(url) {
+          return new Promise((resolve, reject) => {
+            https.get(url, (res) => {
+              let data = '';
+              res.on('data', (chunk) => data += chunk);
+              res.on('end', () => {
+                try {
+                  resolve(JSON.parse(data));
+                } catch (e) {
+                  reject(e);
+                }
+              });
+            }).on('error', reject);
+          });
+        }
+        
+        async function updateFPLData() {
+          try {
+            console.log('Hämtar FPL data...');
+            
+            // Hämta grundläggande info för aktuell gameweek
+            const bootstrap = await fetchData('https://fantasy.premierleague.com/api/bootstrap-static/');
+            const currentGW = bootstrap.events.find(event => event.is_current)?.id || 5;
+            
+            console.log(`Aktuell gameweek: ${currentGW}`);
+            
+            const players = [];
+            const gwScores = []; // För att beräkna swish
+            
+            // Hämta data för varje spelare
+            for (const [teamId, playerName] of Object.entries(TEAM_IDS)) {
+              try {
+                console.log(`Hämtar data för ${playerName}...`);
+                
+                const playerData = await fetchData(`https://fantasy.premierleague.com/api/entry/${teamId}/`);
+                
+                // Hämta historik för att få gameweek-poäng
+                const historyData = await fetchData(`https://fantasy.premierleague.com/api/entry/${teamId}/history/`);
+                
+                // Försök hämta live gameweek data
+                let eventTotal = 0;
+                try {
+                  const liveData = await fetchData(`https://fantasy.premierleague.com/api/entry/${teamId}/event/${currentGW}/picks/`);
+                  eventTotal = liveData.entry_history?.points || 0;
+                } catch (liveError) {
+                  console.log(`Ingen live data för ${playerName}`);
+                }
+                
+                players.push({
+                  player_name: playerName,
+                  entry_name: playerData.name,
+                  total: playerData.summary_overall_points,
+                  event_total: eventTotal,
+                  entry: parseInt(teamId),
+                  rank: 0,
+                  history: historyData.current || []
+                });
+                
+                // Samla gameweek-poäng för swish-beräkning
+                if (historyData.current && historyData.current.length > 0) {
+                  const latestGW = historyData.current[historyData.current.length - 1];
+                  gwScores.push({
+                    name: playerName,
+                    points: latestGW.points,
+                    gameweek: latestGW.event
+                  });
+                }
+                
+                console.log(`${playerName}: ${playerData.summary_overall_points} totalt, ${eventTotal} denna GW`);
+                
+                // Paus mellan API-anrop
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+              } catch (error) {
+                console.error(`Fel för ${playerName}:`, error.message);
+                // Lägg till fallback
+                players.push({
+                  player_name: playerName,
+                  entry_name: TEAM_IDS[teamId],
+                  total: 0,
+                  event_total: 0,
+                  entry: parseInt(teamId),
+                  rank: 0,
+                  history: []
+                });
+              }
+            }
+            
+            // Sortera efter poäng och sätt rank
+            players.sort((a, b) => b.total - a.total);
+            players.forEach((player, index) => {
+              player.rank = index + 1;
+            });
+            
+            // Beräkna swish-historik
+            const swishHistory = [];
+            
+            // Hårdkodad historik för GW 1-4
+            const knownSwish = [
+              { gameweek: 1, loser: 'Samuel Rosqvist', points: 42, swishAmount: 30 },
+              { gameweek: 2, loser: 'August Bång', points: 36, swishAmount: 30 },
+              { gameweek: 3, loser: 'Emil Jönsson', points: 24, swishAmount: 30 },
+              { gameweek: 4, loser: 'Elias Håkansson', points: 59, swishAmount: 30 }
+            ];
+            
+            swishHistory.push(...knownSwish);
+            
+            // Beräkna swish för senaste gameweek om vi har data
+            if (gwScores.length > 0) {
+              gwScores.sort((a, b) => a.points - b.points);
+              const loser = gwScores[0];
+              const latestGW = loser.gameweek;
+              
+              // Kontrollera om vi redan har swish för denna gameweek
+              const existingSwish = swishHistory.find(s => s.gameweek === latestGW);
+              if (!existingSwish && latestGW > 4) {
+                swishHistory.push({
+                  gameweek: latestGW,
+                  loser: loser.name,
+                  points: loser.points,
+                  swishAmount: 30
+                });
+                console.log(`Ny swish beräknad: GW${latestGW} - ${loser.name} med ${loser.points} poäng`);
+              }
+            }
+            
+            // Skapa JSON struktur
+            const jsonData = {
+              last_updated: new Date().toISOString(),
+              current_gameweek: currentGW,
+              standings: {
+                results: players
+              },
+              swish_history: swishHistory
+            };
+            
+            // Skriv till fil
+            fs.writeFileSync('fpl-data.json', JSON.stringify(jsonData, null, 2));
+            console.log('FPL data uppdaterat!');
+            
+          } catch (error) {
+            console.error('Fel vid datahämtning:', error);
+            process.exit(1);
+          }
+        }
+        
+        updateFPLData();
+        EOF
+        
+        # Kör scriptet
+        node fetch_data.js
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add fpl-data.json
+        if git diff --staged --quiet; then
+          echo "Ingen förändring i data"
+        else
+          git commit -m "Automatisk uppdatering av FPL data - $(date '+%Y-%m-%d %H:%M')"
           git push
+        fi
