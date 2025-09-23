@@ -2,8 +2,8 @@ name: Update FPL Data
 
 on:
   schedule:
-    # Kör varje dag kl 09:00 UTC (11:00 svensk tid)
-    - cron: '0 9 * * *'
+    # Kör varje dag kl 10:00 UTC (12:00 svensk tid)
+    - cron: '0 10 * * *'
   workflow_dispatch: # Tillåter manuell körning
 
 jobs:
@@ -12,68 +12,144 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
         
     - name: Fetch FPL data
       run: |
-        node -e "
+        # Skapa Node.js script för att hämta FPL data
+        cat > fetch_data.js << 'EOF'
         const https = require('https');
         const fs = require('fs');
         
-        const LEAGUE_ID = '1882708';
-        const API_BASE = 'https://fantasy.premierleague.com/api';
+        // Team IDs för er liga
+        const TEAM_IDS = {
+          1102453: 'Fredrik Lillbäck',
+          159609: 'Anton Ström', 
+          2571381: 'Sebastian Bonasoni',
+          5475077: 'Oscar Jonsson',
+          2373878: 'August Bång',
+          4000088: 'Samuel Rosqvist',
+          240747: 'Jakob Hammarström',
+          4915802: 'Emil Jönsson',
+          1703536: 'Elias Håkansson'
+        };
         
         async function fetchData(url) {
           return new Promise((resolve, reject) => {
             https.get(url, (res) => {
               let data = '';
-              res.on('data', chunk => data += chunk);
-              res.on('end', () => resolve(JSON.parse(data)));
-              res.on('error', reject);
-            });
+              res.on('data', (chunk) => data += chunk);
+              res.on('end', () => {
+                try {
+                  resolve(JSON.parse(data));
+                } catch (e) {
+                  reject(e);
+                }
+              });
+            }).on('error', reject);
           });
         }
         
-        async function main() {
+        async function updateFPLData() {
           try {
             console.log('Hämtar FPL data...');
-            const league = await fetchData(\`\${API_BASE}/leagues-classic/\${LEAGUE_ID}/standings/\`);
-            const bootstrap = await fetchData(\`\${API_BASE}/bootstrap-static/\`);
             
+            // Hämta grundläggande info för aktuell gameweek
+            const bootstrap = await fetchData('https://fantasy.premierleague.com/api/bootstrap-static/');
             const currentGW = bootstrap.events.find(event => event.is_current)?.id || 5;
             
-            const result = {
-              leagueId: LEAGUE_ID,
-              lastUpdated: new Date().toISOString(),
-              currentGameweek: currentGW,
-              standings: league.standings.results.map(manager => ({
-                name: manager.player_name,
-                teamId: manager.entry,
-                totalPoints: manager.total,
-                rank: manager.rank
-              }))
+            console.log(`Aktuell gameweek: ${currentGW}`);
+            
+            const players = [];
+            
+            // Hämta data för varje spelare
+            for (const [teamId, playerName] of Object.entries(TEAM_IDS)) {
+              try {
+                console.log(`Hämtar data för ${playerName}...`);
+                
+                const playerData = await fetchData(`https://fantasy.premierleague.com/api/entry/${teamId}/`);
+                
+                // Försök hämta live gameweek data
+                let eventTotal = 0;
+                try {
+                  const liveData = await fetchData(`https://fantasy.premierleague.com/api/entry/${teamId}/event/${currentGW}/picks/`);
+                  eventTotal = liveData.entry_history?.points || 0;
+                } catch (liveError) {
+                  console.log(`Ingen live data för ${playerName}`);
+                }
+                
+                players.push({
+                  player_name: playerName,
+                  entry_name: playerData.name,
+                  total: playerData.summary_overall_points,
+                  event_total: eventTotal,
+                  entry: parseInt(teamId),
+                  rank: 0
+                });
+                
+                console.log(`${playerName}: ${playerData.summary_overall_points} totalt, ${eventTotal} denna GW`);
+                
+                // Paus mellan API-anrop
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+              } catch (error) {
+                console.error(`Fel för ${playerName}:`, error.message);
+                // Lägg till fallback
+                players.push({
+                  player_name: playerName,
+                  entry_name: TEAM_IDS[teamId],
+                  total: 0,
+                  event_total: 0,
+                  entry: parseInt(teamId),
+                  rank: 0
+                });
+              }
+            }
+            
+            // Sortera efter poäng och sätt rank
+            players.sort((a, b) => b.total - a.total);
+            players.forEach((player, index) => {
+              player.rank = index + 1;
+            });
+            
+            // Skapa JSON struktur
+            const jsonData = {
+              last_updated: new Date().toISOString(),
+              current_gameweek: currentGW,
+              standings: {
+                results: players
+              }
             };
             
-            fs.writeFileSync('fpl-data.json', JSON.stringify(result, null, 2));
-            console.log('Data sparad i fpl-data.json');
+            // Skriv till fil
+            fs.writeFileSync('fpl-data.json', JSON.stringify(jsonData, null, 2));
+            console.log('FPL data uppdaterat!');
+            
           } catch (error) {
-            console.error('Fel:', error);
+            console.error('Fel vid datahämtning:', error);
             process.exit(1);
           }
         }
         
-        main();
-        "
+        updateFPLData();
+        EOF
+        
+        # Kör scriptet
+        node fetch_data.js
         
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add fpl-data.json
-        git commit -m "Uppdatera FPL data automatiskt" || exit 0
-        git push
+        if git diff --staged --quiet; then
+          echo "Ingen förändring i data"
+        else
+          git commit -m "Automatisk uppdatering av FPL data - $(date '+%Y-%m-%d %H:%M')"
+          git push
+        fi
