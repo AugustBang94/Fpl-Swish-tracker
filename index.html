@@ -333,80 +333,43 @@
             1703536: 'Elias Håkansson'
         };
 
-        // Hämta aktuell data från FPL API via CORS-proxy
+        // Hämta data från din egen JSON-fil istället för CORS-proxies
         async function fetchFPLData() {
             try {
-                console.log('Hämtar FPL data...');
+                console.log('Hämtar FPL data från JSON-fil...');
                 
-                // Prova flera CORS-proxies
-                const PROXIES = [
-                    'https://corsproxy.io/?',
-                    'https://cors-anywhere.herokuapp.com/',
-                    'https://api.allorigins.win/get?url='
-                ];
+                // Hämta data från din fpl-data.json fil
+                const response = await fetch('./fpl-data.json');
+                const jsonData = await response.json();
                 
-                let bootstrap = null;
-                
-                // Försök med olika proxies
-                for (const PROXY of PROXIES) {
-                    try {
-                        console.log(`Försöker med proxy: ${PROXY}`);
-                        const bootstrapUrl = PROXY.includes('allorigins') ? 
-                            encodeURIComponent('https://fantasy.premierleague.com/api/bootstrap-static/') :
-                            'https://fantasy.premierleague.com/api/bootstrap-static/';
-                        
-                        const bootstrapResponse = await fetch(`${PROXY}${bootstrapUrl}`);
-                        
-                        if (PROXY.includes('allorigins')) {
-                            const bootstrapText = await bootstrapResponse.json();
-                            bootstrap = JSON.parse(bootstrapText.contents);
-                        } else {
-                            bootstrap = await bootstrapResponse.json();
-                        }
-                        
-                        console.log('✅ API-anslutning lyckades med:', PROXY);
-                        break;
-                    } catch (proxyError) {
-                        console.log(`❌ Proxy ${PROXY} misslyckades:`, proxyError.message);
-                        continue;
-                    }
+                if (jsonData && jsonData.standings && jsonData.standings.results) {
+                    const players = jsonData.standings.results.map((player, index) => ({
+                        name: player.player_name,
+                        totalPoints: player.total,
+                        teamName: player.entry_name,
+                        rank: index + 1,
+                        teamId: player.entry,
+                        currentGWPoints: player.event_total || 0,
+                        history: []
+                    }));
+                    
+                    fplData = {
+                        lastUpdated: new Date().toLocaleString('sv-SE'),
+                        currentGameweek: 5,
+                        players: players,
+                        isLoading: false
+                    };
+                } else {
+                    throw new Error('Ogiltig JSON-struktur');
                 }
                 
-                // Om inget API fungerade, använd fallback helt
-                if (!bootstrap) {
-                    throw new Error('Alla CORS-proxies misslyckades');
-                }
-                
-                const currentGW = bootstrap.events.find(event => event.is_current)?.id || 5;
-                
-                // För nu - hoppa över individuella API-anrop och använd bara fallback-data
-                // eftersom CORS är problematiskt
-                console.log('⚠️ Använder fallback-data på grund av CORS-problem');
-                
-                fplData = {
-                    lastUpdated: new Date().toLocaleString('sv-SE') + ' (Fallback data)',
-                    currentGameweek: currentGW,
-                    players: [
-                        { name: 'Fredrik Lillbäck', totalPoints: 241, teamName: 'Lil B United', rank: 1, history: [] },
-                        { name: 'Anton Ström', totalPoints: 238, teamName: 'Arnes Army', rank: 2, history: [] },
-                        { name: 'Sebastian Bonasoni', totalPoints: 232, teamName: 'Mudryks monsters', rank: 3, history: [] },
-                        { name: 'Oscar Jonsson', totalPoints: 223, teamName: 'FC Bärsalona', rank: 4, history: [] },
-                        { name: 'August Bång', totalPoints: 220, teamName: 'Club de national', rank: 5, history: [] },
-                        { name: 'Samuel Rosqvist', totalPoints: 209, teamName: 'Samlag1', rank: 6, history: [] },
-                        { name: 'Jakob Hammarström', totalPoints: 207, teamName: 'Hammarström FC', rank: 7, history: [] },
-                        { name: 'Emil Jönsson', totalPoints: 201, teamName: 'McJönnister', rank: 8, history: [] },
-                        { name: 'Elias Håkansson', totalPoints: 200, teamName: 'Hawkansun', rank: 9, history: [] }
-                    ],
-                    isLoading: false
-                };
-                
-                console.log('✅ FPL data laddat (fallback):', fplData);
+                console.log('✅ FPL data laddat från JSON:', fplData);
                 return fplData;
                 
             } catch (error) {
-                console.error('❌ Alla API-försök misslyckades:', error);
+                console.error('❌ Fel vid hämtning av JSON data:', error);
                 
-                // Absolut fallback
+                // Fallback till dina riktiga poäng
                 fplData = {
                     lastUpdated: 'Riktiga poäng från GW1-4 (manuellt uppdaterat)',
                     currentGameweek: 5,
