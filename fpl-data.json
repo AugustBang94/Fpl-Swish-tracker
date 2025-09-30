@@ -1,15 +1,109 @@
 {
-  "last_updated": "2025-09-30T03:30:32.389Z",
+  "last_updated": "2025-09-30T03:49:08.505Z",
   "current_gameweek": 6,
   "standings": {
     "results": [
+      {
+        "player_name": "Fredrik Lillbäck",
+        "entry_name": "Lil B United",
+        "total": 363,
+        "event_total": 72,
+        "entry": 1102453,
+        "rank": 1,
+        "history": [
+          {
+            "event": 1,
+            "points": 46,
+            "total_points": 46,
+            "rank": 6908104,
+            "rank_sort": 6937028,
+            "overall_rank": 6908093,
+            "percentile_rank": 75,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 4
+          },
+          {
+            "event": 2,
+            "points": 72,
+            "total_points": 118,
+            "rank": 681875,
+            "rank_sort": 685630,
+            "overall_rank": 2056707,
+            "percentile_rank": 10,
+            "bank": 14,
+            "value": 1001,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 8
+          },
+          {
+            "event": 3,
+            "points": 42,
+            "total_points": 160,
+            "rank": 7791377,
+            "rank_sort": 7801210,
+            "overall_rank": 3207127,
+            "percentile_rank": 70,
+            "bank": 53,
+            "value": 1005,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 5
+          },
+          {
+            "event": 4,
+            "points": 81,
+            "total_points": 241,
+            "rank": 1043748,
+            "rank_sort": 1048283,
+            "overall_rank": 1503983,
+            "percentile_rank": 10,
+            "bank": 1,
+            "value": 1007,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 10
+          },
+          {
+            "event": 5,
+            "points": 50,
+            "total_points": 291,
+            "rank": 2714461,
+            "rank_sort": 2733134,
+            "overall_rank": 1197749,
+            "percentile_rank": 25,
+            "bank": 1,
+            "value": 1012,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 17
+          },
+          {
+            "event": 6,
+            "points": 72,
+            "total_points": 363,
+            "rank": 892742,
+            "rank_sort": 897004,
+            "overall_rank": 626636,
+            "percentile_rank": 10,
+            "bank": 1,
+            "value": 1014,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
         "total": 350,
         "event_total": 92,
         "entry": 240747,
-        "rank": 1,
+        "rank": 2,
         "history": [
           {
             "event": 1,
@@ -103,7 +197,7 @@
         "total": 349,
         "event_total": 67,
         "entry": 5475077,
-        "rank": 2,
+        "rank": 3,
         "history": [
           {
             "event": 1,
@@ -197,7 +291,7 @@
         "total": 342,
         "event_total": 69,
         "entry": 2373878,
-        "rank": 3,
+        "rank": 4,
         "history": [
           {
             "event": 1,
@@ -291,7 +385,7 @@
         "total": 332,
         "event_total": 52,
         "entry": 159609,
-        "rank": 4,
+        "rank": 5,
         "history": [
           {
             "event": 1,
@@ -385,7 +479,7 @@
         "total": 331,
         "event_total": 70,
         "entry": 2571381,
-        "rank": 5,
+        "rank": 6,
         "history": [
           {
             "event": 1,
@@ -479,7 +573,7 @@
         "total": 321,
         "event_total": 72,
         "entry": 4915802,
-        "rank": 6,
+        "rank": 7,
         "history": [
           {
             "event": 1,
@@ -573,7 +667,7 @@
         "total": 314,
         "event_total": 58,
         "entry": 1703536,
-        "rank": 7,
+        "rank": 8,
         "history": [
           {
             "event": 1,
@@ -667,7 +761,7 @@
         "total": 314,
         "event_total": 69,
         "entry": 4000088,
-        "rank": 8,
+        "rank": 9,
         "history": [
           {
             "event": 1,
@@ -754,15 +848,6 @@
             "points_on_bench": 6
           }
         ]
-      },
-      {
-        "player_name": "Fredrik Lillbäck",
-        "entry_name": "Fredrik Lillbäck",
-        "total": 0,
-        "event_total": 0,
-        "entry": 1102453,
-        "rank": 9,
-        "history": []
       }
     ]
   },
