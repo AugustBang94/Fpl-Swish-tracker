@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-04T20:37:10.012Z",
+  "last_updated": "2025-10-04T20:47:46.624Z",
   "current_gameweek": 7,
   "standings": {
     "results": [
@@ -7,7 +7,7 @@
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
         "total": 405,
-        "event_total": 42,
+        "event_total": 43,
         "entry": 1102453,
         "rank": 1,
         "history": [
@@ -115,7 +115,7 @@
         "player_name": "Oscar Jonsson",
         "entry_name": "FC Bärsalona",
         "total": 398,
-        "event_total": 49,
+        "event_total": 53,
         "entry": 5475077,
         "rank": 2,
         "history": [
@@ -223,7 +223,7 @@
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
         "total": 396,
-        "event_total": 46,
+        "event_total": 50,
         "entry": 240747,
         "rank": 3,
         "history": [
@@ -331,7 +331,7 @@
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
         "total": 382,
-        "event_total": 50,
+        "event_total": 53,
         "entry": 159609,
         "rank": 4,
         "history": [
@@ -439,7 +439,7 @@
         "player_name": "August Bång",
         "entry_name": "Club de national",
         "total": 382,
-        "event_total": 40,
+        "event_total": 41,
         "entry": 2373878,
         "rank": 5,
         "history": [
@@ -547,7 +547,7 @@
         "player_name": "Emil Jönsson",
         "entry_name": "McJönnister",
         "total": 362,
-        "event_total": 41,
+        "event_total": 43,
         "entry": 4915802,
         "rank": 6,
         "history": [
@@ -655,7 +655,7 @@
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
         "total": 358,
-        "event_total": 44,
+        "event_total": 47,
         "entry": 1703536,
         "rank": 7,
         "history": [
@@ -871,7 +871,7 @@
         "player_name": "Samuel Rosqvist",
         "entry_name": "Samlag1",
         "total": 355,
-        "event_total": 41,
+        "event_total": 42,
         "entry": 4000088,
         "rank": 9,
         "history": [
