@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-19T19:38:10.540Z",
+  "last_updated": "2025-10-19T19:48:37.886Z",
   "current_gameweek": 8,
   "standings": {
     "results": [
@@ -860,8 +860,8 @@
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Samlag1",
-        "total": 448,
-        "event_total": 61,
+        "total": 451,
+        "event_total": 64,
         "entry": 4000088,
         "rank": 8,
         "history": [
