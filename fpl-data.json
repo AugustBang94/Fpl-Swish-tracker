@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-25T23:16:37.062Z",
+  "last_updated": "2025-10-25T23:29:34.506Z",
   "current_gameweek": 9,
   "standings": {
     "results": [
@@ -278,8 +278,8 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
-        "total": 512,
-        "event_total": 13,
+        "total": 515,
+        "event_total": 16,
         "entry": 240747,
         "rank": 3,
         "history": [
@@ -1094,8 +1094,8 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Mudryks monsters",
-        "total": 449,
-        "event_total": 13,
+        "total": 452,
+        "event_total": 16,
         "entry": 2571381,
         "rank": 9,
         "history": [
