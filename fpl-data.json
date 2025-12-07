@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-07T21:30:12.246Z",
+  "last_updated": "2025-12-07T21:40:59.467Z",
   "current_gameweek": 15,
   "standings": {
     "results": [
@@ -1546,8 +1546,8 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
-        "total": 799,
-        "event_total": 44,
+        "total": 801,
+        "event_total": 46,
         "entry": 1703536,
         "rank": 8,
         "history": [
