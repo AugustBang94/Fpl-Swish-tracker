@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-21T20:55:31.135Z",
+  "last_updated": "2025-12-21T21:18:12.035Z",
   "current_gameweek": 17,
   "standings": {
     "results": [
@@ -502,8 +502,8 @@
       {
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
-        "total": 1042,
-        "event_total": 79,
+        "total": 1041,
+        "event_total": 78,
         "entry": 159609,
         "rank": 3,
         "history": [
@@ -750,8 +750,8 @@
       {
         "player_name": "Emil Jönsson",
         "entry_name": "McJönnister",
-        "total": 1031,
-        "event_total": 72,
+        "total": 1030,
+        "event_total": 71,
         "entry": 4915802,
         "rank": 4,
         "history": [
@@ -998,8 +998,8 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
-        "total": 1027,
-        "event_total": 79,
+        "total": 1026,
+        "event_total": 78,
         "entry": 1102453,
         "rank": 5,
         "history": [
@@ -1494,8 +1494,8 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
-        "total": 995,
-        "event_total": 64,
+        "total": 998,
+        "event_total": 67,
         "entry": 240747,
         "rank": 7,
         "history": [
@@ -1742,8 +1742,8 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
-        "total": 948,
-        "event_total": 71,
+        "total": 949,
+        "event_total": 72,
         "entry": 1703536,
         "rank": 8,
         "history": [
@@ -1990,8 +1990,8 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Mudryks monsters",
-        "total": 946,
-        "event_total": 71,
+        "total": 945,
+        "event_total": 70,
         "entry": 2571381,
         "rank": 9,
         "history": [
