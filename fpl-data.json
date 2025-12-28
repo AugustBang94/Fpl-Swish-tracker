@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-28T21:56:17.634Z",
+  "last_updated": "2025-12-28T22:22:07.591Z",
   "current_gameweek": 18,
   "standings": {
     "results": [
@@ -7,7 +7,7 @@
         "player_name": "Oscar Jonsson",
         "entry_name": "FC Bärsalona",
         "total": 1122,
-        "event_total": 40,
+        "event_total": 48,
         "entry": 5475077,
         "rank": 1,
         "history": [
@@ -269,7 +269,7 @@
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
         "total": 1090,
-        "event_total": 41,
+        "event_total": 52,
         "entry": 159609,
         "rank": 2,
         "history": [
@@ -531,7 +531,7 @@
         "player_name": "August Bång",
         "entry_name": "Club de national",
         "total": 1080,
-        "event_total": 36,
+        "event_total": 38,
         "entry": 2373878,
         "rank": 3,
         "history": [
@@ -793,7 +793,7 @@
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
         "total": 1078,
-        "event_total": 45,
+        "event_total": 47,
         "entry": 1102453,
         "rank": 4,
         "history": [
@@ -1055,7 +1055,7 @@
         "player_name": "Emil Jönsson",
         "entry_name": "McJönnister",
         "total": 1078,
-        "event_total": 51,
+        "event_total": 53,
         "entry": 4915802,
         "rank": 5,
         "history": [
@@ -1579,7 +1579,7 @@
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
         "total": 1031,
-        "event_total": 34,
+        "event_total": 36,
         "entry": 240747,
         "rank": 7,
         "history": [
@@ -1841,7 +1841,7 @@
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
         "total": 999,
-        "event_total": 45,
+        "event_total": 49,
         "entry": 1703536,
         "rank": 8,
         "history": [
