@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-03T21:56:22.995Z",
+  "last_updated": "2026-01-03T22:22:19.402Z",
   "current_gameweek": 20,
   "standings": {
     "results": [
@@ -296,8 +296,8 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
-        "total": 1145,
-        "event_total": 21,
+        "total": 1148,
+        "event_total": 24,
         "entry": 1102453,
         "rank": 2,
         "history": [
@@ -1746,8 +1746,8 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
-        "total": 1089,
-        "event_total": 24,
+        "total": 1090,
+        "event_total": 25,
         "entry": 240747,
         "rank": 7,
         "history": [
