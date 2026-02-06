@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-02-06T22:20:50.751Z",
+  "last_updated": "2026-02-06T22:50:04.595Z",
   "current_gameweek": 25,
   "standings": {
     "results": [
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "FC Bärsalona",
-        "total": 1417,
-        "event_total": 0,
+        "total": 1421,
+        "event_total": 4,
         "entry": 5475077,
         "rank": 1,
         "history": [
@@ -2166,8 +2166,8 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
-        "total": 1316,
-        "event_total": 0,
+        "total": 1320,
+        "event_total": 4,
         "entry": 1703536,
         "rank": 7,
         "history": [
