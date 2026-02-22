@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-22T19:52:09.707Z",
+  "last_updated": "2026-02-22T20:27:13.936Z",
   "current_gameweek": 27,
   "standings": {
     "results": [
@@ -377,12 +377,12 @@
           },
           {
             "event": 27,
-            "points": 28,
-            "total_points": 1557,
-            "rank": 2780722,
-            "rank_sort": 2873813,
-            "overall_rank": 219834,
-            "percentile_rank": 25,
+            "points": 47,
+            "total_points": 1576,
+            "rank": 1660942,
+            "rank_sort": 1721405,
+            "overall_rank": 183159,
+            "percentile_rank": 15,
             "bank": 17,
             "value": 1036,
             "event_transfers": 0,
@@ -765,17 +765,17 @@
           },
           {
             "event": 27,
-            "points": 23,
-            "total_points": 1562,
-            "rank": 5290086,
-            "rank_sort": 5455395,
-            "overall_rank": 184529,
-            "percentile_rank": 45,
+            "points": 33,
+            "total_points": 1572,
+            "rank": 7993694,
+            "rank_sort": 8142797,
+            "overall_rank": 204729,
+            "percentile_rank": 65,
             "bank": 2,
             "value": 1036,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 2
+            "points_on_bench": 8
           }
         ]
       },
@@ -1153,17 +1153,17 @@
           },
           {
             "event": 27,
-            "points": 19,
-            "total_points": 1554,
-            "rank": 7650880,
-            "rank_sort": 7712652,
-            "overall_rank": 239237,
+            "points": 34,
+            "total_points": 1569,
+            "rank": 7450762,
+            "rank_sort": 7513528,
+            "overall_rank": 226635,
             "percentile_rank": 60,
             "bank": 1,
             "value": 1047,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 2
+            "points_on_bench": 7
           }
         ]
       },
@@ -1541,17 +1541,17 @@
           },
           {
             "event": 27,
-            "points": 27,
-            "total_points": 1538,
-            "rank": 3180643,
-            "rank_sort": 3184744,
-            "overall_rank": 376932,
-            "percentile_rank": 25,
+            "points": 36,
+            "total_points": 1547,
+            "rank": 6330234,
+            "rank_sort": 6334540,
+            "overall_rank": 420884,
+            "percentile_rank": 50,
             "bank": 4,
             "value": 1026,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 4
+            "points_on_bench": 12
           }
         ]
       },
@@ -1929,12 +1929,12 @@
           },
           {
             "event": 27,
-            "points": 23,
-            "total_points": 1504,
-            "rank": 5290086,
-            "rank_sort": 5408780,
-            "overall_rank": 843717,
-            "percentile_rank": 45,
+            "points": 53,
+            "total_points": 1534,
+            "rank": 630004,
+            "rank_sort": 651307,
+            "overall_rank": 581064,
+            "percentile_rank": 5,
             "bank": 1,
             "value": 1032,
             "event_transfers": 0,
@@ -2317,17 +2317,17 @@
           },
           {
             "event": 27,
-            "points": 16,
-            "total_points": 1510,
-            "rank": 9251440,
-            "rank_sort": 9277483,
-            "overall_rank": 743846,
-            "percentile_rank": 75,
+            "points": 38,
+            "total_points": 1532,
+            "rank": 5228074,
+            "rank_sort": 5256488,
+            "overall_rank": 608862,
+            "percentile_rank": 45,
             "bank": 1,
             "value": 1053,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 4
           }
         ]
       },
@@ -2705,17 +2705,17 @@
           },
           {
             "event": 27,
-            "points": 27,
-            "total_points": 1474,
-            "rank": 3522236,
-            "rank_sort": 3545924,
-            "overall_rank": 1461980,
-            "percentile_rank": 30,
+            "points": 41,
+            "total_points": 1488,
+            "rank": 4060712,
+            "rank_sort": 4077452,
+            "overall_rank": 1442100,
+            "percentile_rank": 35,
             "bank": 3,
             "value": 1029,
             "event_transfers": 1,
             "event_transfers_cost": 0,
-            "points_on_bench": 10
+            "points_on_bench": 15
           }
         ]
       },
@@ -3093,17 +3093,17 @@
           },
           {
             "event": 27,
-            "points": 32,
-            "total_points": 1478,
-            "rank": 1395071,
-            "rank_sort": 1397703,
-            "overall_rank": 1376645,
-            "percentile_rank": 15,
+            "points": 39,
+            "total_points": 1485,
+            "rank": 4706812,
+            "rank_sort": 4712567,
+            "overall_rank": 1520616,
+            "percentile_rank": 40,
             "bank": 0,
             "value": 1033,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 3
+            "points_on_bench": 6
           }
         ]
       },
@@ -3481,17 +3481,17 @@
           },
           {
             "event": 27,
-            "points": 44,
-            "total_points": 1442,
-            "rank": 141810,
-            "rank_sort": 146222,
-            "overall_rank": 2318997,
-            "percentile_rank": 5,
+            "points": 62,
+            "total_points": 1460,
+            "rank": 108254,
+            "rank_sort": 110808,
+            "overall_rank": 2183732,
+            "percentile_rank": 1,
             "bank": 4,
             "value": 1029,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 2
+            "points_on_bench": 7
           }
         ]
       }
@@ -3524,8 +3524,8 @@
     },
     {
       "gameweek": 27,
-      "loser": "Fredrik Lillbäck",
-      "points": 16,
+      "loser": "Oscar Jonsson",
+      "points": 33,
       "swishAmount": 30
     }
   ]
