@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-02-23T23:32:40.213Z",
+  "last_updated": "2026-02-24T01:57:03.246Z",
   "current_gameweek": 27,
   "standings": {
     "results": [
       {
         "player_name": "Emil Jönsson",
         "entry_name": "McJönnister",
-        "total": 1579,
-        "event_total": 50,
+        "total": 1590,
+        "event_total": 61,
         "entry": 4915802,
         "rank": 1,
         "history": [
@@ -394,8 +394,8 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "FC Bärsalona",
-        "total": 1573,
-        "event_total": 34,
+        "total": 1578,
+        "event_total": 39,
         "entry": 5475077,
         "rank": 2,
         "history": [
@@ -782,8 +782,8 @@
       {
         "player_name": "August Bång",
         "entry_name": "Club de national",
-        "total": 1571,
-        "event_total": 36,
+        "total": 1573,
+        "event_total": 38,
         "entry": 2373878,
         "rank": 3,
         "history": [
@@ -1170,8 +1170,8 @@
       {
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
-        "total": 1548,
-        "event_total": 37,
+        "total": 1552,
+        "event_total": 41,
         "entry": 159609,
         "rank": 4,
         "history": [
@@ -1558,8 +1558,8 @@
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Samlag1",
-        "total": 1538,
-        "event_total": 57,
+        "total": 1540,
+        "event_total": 59,
         "entry": 4000088,
         "rank": 5,
         "history": [
@@ -1946,8 +1946,8 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
-        "total": 1536,
-        "event_total": 42,
+        "total": 1539,
+        "event_total": 45,
         "entry": 1102453,
         "rank": 6,
         "history": [
@@ -2334,8 +2334,8 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
-        "total": 1490,
-        "event_total": 43,
+        "total": 1498,
+        "event_total": 51,
         "entry": 1703536,
         "rank": 7,
         "history": [
@@ -2722,8 +2722,8 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
-        "total": 1486,
-        "event_total": 40,
+        "total": 1487,
+        "event_total": 41,
         "entry": 240747,
         "rank": 8,
         "history": [
@@ -3110,8 +3110,8 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Mudryks monsters",
-        "total": 1463,
-        "event_total": 65,
+        "total": 1469,
+        "event_total": 71,
         "entry": 2571381,
         "rank": 9,
         "history": [
