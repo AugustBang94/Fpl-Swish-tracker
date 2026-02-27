@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-27T22:20:19.668Z",
+  "last_updated": "2026-02-27T22:50:11.015Z",
   "current_gameweek": 28,
   "standings": {
     "results": [
@@ -1213,7 +1213,7 @@
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
         "total": 1552,
-        "event_total": 0,
+        "event_total": 2,
         "entry": 159609,
         "rank": 4,
         "history": [
@@ -2017,7 +2017,7 @@
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
         "total": 1539,
-        "event_total": 0,
+        "event_total": 2,
         "entry": 1102453,
         "rank": 6,
         "history": [
@@ -2821,7 +2821,7 @@
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
         "total": 1487,
-        "event_total": 0,
+        "event_total": 3,
         "entry": 240747,
         "rank": 8,
         "history": [
@@ -3223,7 +3223,7 @@
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Mudryks monsters",
         "total": 1469,
-        "event_total": 0,
+        "event_total": 1,
         "entry": 2571381,
         "rank": 9,
         "history": [
