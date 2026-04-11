@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-11T19:47:18.947Z",
+  "last_updated": "2026-04-11T20:15:48.672Z",
   "current_gameweek": 32,
   "standings": {
     "results": [
@@ -451,7 +451,7 @@
             "total_points": 1896,
             "rank": 1100409,
             "rank_sort": 1153926,
-            "overall_rank": 48140,
+            "overall_rank": 48141,
             "percentile_rank": 10,
             "bank": 6,
             "value": 1023,
@@ -909,7 +909,7 @@
             "total_points": 1855,
             "rank": 7036141,
             "rank_sort": 7211430,
-            "overall_rank": 173650,
+            "overall_rank": 173651,
             "percentile_rank": 55,
             "bank": 3,
             "value": 1030,
@@ -3657,7 +3657,7 @@
             "total_points": 1750,
             "rank": 3154,
             "rank_sort": 3158,
-            "overall_rank": 1352316,
+            "overall_rank": 1352318,
             "percentile_rank": 1,
             "bank": 0,
             "value": 1021,
@@ -4115,7 +4115,7 @@
             "total_points": 1714,
             "rank": 2883538,
             "rank_sort": 2933875,
-            "overall_rank": 2064018,
+            "overall_rank": 2064023,
             "percentile_rank": 25,
             "bank": 5,
             "value": 1038,
