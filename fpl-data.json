@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-18T22:19:18.023Z",
+  "last_updated": "2026-04-18T22:58:40.949Z",
   "current_gameweek": 33,
   "standings": {
     "results": [
@@ -461,12 +461,12 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1933,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 39621,
-            "percentile_rank": null,
+            "points": 45,
+            "total_points": 1978,
+            "rank": 218087,
+            "rank_sort": 224228,
+            "overall_rank": 27158,
+            "percentile_rank": 5,
             "bank": 5,
             "value": 1025,
             "event_transfers": 1,
@@ -933,12 +933,12 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1874,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 243989,
-            "percentile_rank": null,
+            "points": 47,
+            "total_points": 1921,
+            "rank": 159277,
+            "rank_sort": 162275,
+            "overall_rank": 159800,
+            "percentile_rank": 5,
             "bank": 14,
             "value": 1038,
             "event_transfers": 1,
@@ -1405,12 +1405,12 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1888,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 167335,
-            "percentile_rank": null,
+            "points": 25,
+            "total_points": 1913,
+            "rank": 2066232,
+            "rank_sort": 2084321,
+            "overall_rank": 195014,
+            "percentile_rank": 20,
             "bank": 2,
             "value": 1026,
             "event_transfers": 2,
@@ -1877,17 +1877,17 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1870,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 271044,
-            "percentile_rank": null,
+            "points": 25,
+            "total_points": 1895,
+            "rank": 1909004,
+            "rank_sort": 1938472,
+            "overall_rank": 297781,
+            "percentile_rank": 15,
             "bank": 0,
             "value": 1040,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 16
           }
         ]
       },
@@ -2349,17 +2349,17 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1848,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 440819,
-            "percentile_rank": null,
+            "points": 33,
+            "total_points": 1881,
+            "rank": 739099,
+            "rank_sort": 771030,
+            "overall_rank": 394461,
+            "percentile_rank": 10,
             "bank": 25,
             "value": 1035,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 2
           }
         ]
       },
@@ -2821,17 +2821,17 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1837,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 552256,
-            "percentile_rank": null,
+            "points": 25,
+            "total_points": 1862,
+            "rank": 1909004,
+            "rank_sort": 1911491,
+            "overall_rank": 566662,
+            "percentile_rank": 15,
             "bank": 0,
             "value": 1009,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 25
           }
         ]
       },
@@ -3293,17 +3293,17 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1823,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 720198,
-            "percentile_rank": null,
+            "points": 32,
+            "total_points": 1855,
+            "rank": 845642,
+            "rank_sort": 870641,
+            "overall_rank": 643141,
+            "percentile_rank": 10,
             "bank": 1,
             "value": 1032,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 16
           }
         ]
       },
@@ -3765,17 +3765,17 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1793,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 1160782,
-            "percentile_rank": null,
+            "points": 36,
+            "total_points": 1829,
+            "rank": 518043,
+            "rank_sort": 520189,
+            "overall_rank": 969918,
+            "percentile_rank": 5,
             "bank": 0,
             "value": 1021,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 8
           }
         ]
       },
@@ -4237,12 +4237,12 @@
           },
           {
             "event": 33,
-            "points": 0,
-            "total_points": 1750,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": 1977512,
-            "percentile_rank": null,
+            "points": 44,
+            "total_points": 1786,
+            "rank": 257011,
+            "rank_sort": 257135,
+            "overall_rank": 1675735,
+            "percentile_rank": 5,
             "bank": 5,
             "value": 1029,
             "event_transfers": 6,
@@ -4281,7 +4281,7 @@
     {
       "gameweek": 33,
       "loser": "Anton Ström",
-      "points": 0,
+      "points": 25,
       "swishAmount": 30
     }
   ]
