@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-04-21T23:33:06.326Z",
+  "last_updated": "2026-04-22T02:24:50.774Z",
   "current_gameweek": 33,
   "standings": {
     "results": [
       {
         "player_name": "Emil Jönsson",
         "entry_name": "McJönnister",
-        "total": 2018,
-        "event_total": 85,
+        "total": 2020,
+        "event_total": 87,
         "entry": 4915802,
         "rank": 1,
         "history": [
@@ -461,11 +461,11 @@
           },
           {
             "event": 33,
-            "points": 85,
-            "total_points": 2018,
-            "rank": 248764,
-            "rank_sort": 253140,
-            "overall_rank": 25018,
+            "points": 87,
+            "total_points": 2020,
+            "rank": 245846,
+            "rank_sort": 249581,
+            "overall_rank": 24802,
             "percentile_rank": 5,
             "bank": 5,
             "value": 1025,
@@ -478,8 +478,8 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
-        "total": 1965,
-        "event_total": 91,
+        "total": 1968,
+        "event_total": 94,
         "entry": 1102453,
         "rank": 2,
         "history": [
@@ -933,12 +933,12 @@
           },
           {
             "event": 33,
-            "points": 91,
-            "total_points": 1965,
-            "rank": 132450,
-            "rank_sort": 135248,
-            "overall_rank": 127547,
-            "percentile_rank": 5,
+            "points": 94,
+            "total_points": 1968,
+            "rank": 122544,
+            "rank_sort": 124160,
+            "overall_rank": 122382,
+            "percentile_rank": 1,
             "bank": 14,
             "value": 1038,
             "event_transfers": 1,
@@ -1407,9 +1407,9 @@
             "event": 33,
             "points": 74,
             "total_points": 1962,
-            "rank": 579543,
-            "rank_sort": 583501,
-            "overall_rank": 137371,
+            "rank": 636020,
+            "rank_sort": 640201,
+            "overall_rank": 142203,
             "percentile_rank": 5,
             "bank": 2,
             "value": 1026,
@@ -1879,15 +1879,15 @@
             "event": 33,
             "points": 52,
             "total_points": 1922,
-            "rank": 3044127,
-            "rank_sort": 3071269,
-            "overall_rank": 343928,
+            "rank": 3114898,
+            "rank_sort": 3141703,
+            "overall_rank": 351382,
             "percentile_rank": 25,
             "bank": 0,
             "value": 1040,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 30
+            "points_on_bench": 31
           }
         ]
       },
@@ -2351,9 +2351,9 @@
             "event": 33,
             "points": 61,
             "total_points": 1909,
-            "rank": 1551853,
-            "rank_sort": 1578729,
-            "overall_rank": 437950,
+            "rank": 1630140,
+            "rank_sort": 1658010,
+            "overall_rank": 446277,
             "percentile_rank": 15,
             "bank": 25,
             "value": 1035,
@@ -2366,8 +2366,8 @@
       {
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
-        "total": 1894,
-        "event_total": 57,
+        "total": 1896,
+        "event_total": 59,
         "entry": 159609,
         "rank": 6,
         "history": [
@@ -2821,17 +2821,17 @@
           },
           {
             "event": 33,
-            "points": 57,
-            "total_points": 1894,
-            "rank": 2112828,
-            "rank_sort": 2115156,
-            "overall_rank": 573755,
-            "percentile_rank": 20,
+            "points": 59,
+            "total_points": 1896,
+            "rank": 1889844,
+            "rank_sort": 1891398,
+            "overall_rank": 563383,
+            "percentile_rank": 15,
             "bank": 0,
             "value": 1009,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 41
+            "points_on_bench": 42
           }
         ]
       },
@@ -3295,15 +3295,15 @@
             "event": 33,
             "points": 61,
             "total_points": 1884,
-            "rank": 1551853,
-            "rank_sort": 1564501,
-            "overall_rank": 680400,
+            "rank": 1630140,
+            "rank_sort": 1643141,
+            "overall_rank": 689942,
             "percentile_rank": 15,
             "bank": 1,
             "value": 1032,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 31
+            "points_on_bench": 32
           }
         ]
       },
@@ -3767,15 +3767,15 @@
             "event": 33,
             "points": 52,
             "total_points": 1845,
-            "rank": 3044127,
-            "rank_sort": 3047371,
-            "overall_rank": 1193226,
+            "rank": 3114898,
+            "rank_sort": 3117944,
+            "overall_rank": 1203796,
             "percentile_rank": 25,
             "bank": 0,
             "value": 1021,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 37
+            "points_on_bench": 42
           }
         ]
       },
@@ -4239,9 +4239,9 @@
             "event": 33,
             "points": 76,
             "total_points": 1818,
-            "rank": 513139,
-            "rank_sort": 513332,
-            "overall_rank": 1643148,
+            "rank": 562520,
+            "rank_sort": 562717,
+            "overall_rank": 1653910,
             "percentile_rank": 5,
             "bank": 5,
             "value": 1029,
