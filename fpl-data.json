@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-05-17T18:41:45.791Z",
+  "last_updated": "2026-05-17T19:54:37.032Z",
   "current_gameweek": 37,
   "standings": {
     "results": [
       {
         "player_name": "Emil Jönsson",
         "entry_name": "McJönnister",
-        "total": 2262,
-        "event_total": 0,
+        "total": 2276,
+        "event_total": 14,
         "entry": 4915802,
         "rank": 1,
         "history": [
@@ -517,25 +517,25 @@
           },
           {
             "event": 37,
-            "points": 0,
-            "total_points": 2262,
-            "rank": 8885660,
-            "rank_sort": 9892923,
-            "overall_rank": 20072,
-            "percentile_rank": 70,
+            "points": 14,
+            "total_points": 2276,
+            "rank": 9448078,
+            "rank_sort": 9554881,
+            "overall_rank": 25313,
+            "percentile_rank": 75,
             "bank": 9,
             "value": 1031,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 9
           }
         ]
       },
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Lil B United",
-        "total": 2230,
-        "event_total": 0,
+        "total": 2246,
+        "event_total": 16,
         "entry": 1102453,
         "rank": 2,
         "history": [
@@ -1045,25 +1045,25 @@
           },
           {
             "event": 37,
-            "points": 0,
-            "total_points": 2230,
-            "rank": 11839204,
-            "rank_sort": 11970323,
-            "overall_rank": 58252,
-            "percentile_rank": 95,
+            "points": 16,
+            "total_points": 2246,
+            "rank": 8943235,
+            "rank_sort": 8952971,
+            "overall_rank": 66652,
+            "percentile_rank": 70,
             "bank": 6,
             "value": 1048,
             "event_transfers": 1,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 13
           }
         ]
       },
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "FC Bärsalona",
-        "total": 2199,
-        "event_total": 54,
+        "total": 2210,
+        "event_total": 65,
         "entry": 5475077,
         "rank": 3,
         "history": [
@@ -1573,25 +1573,25 @@
           },
           {
             "event": 37,
-            "points": 54,
-            "total_points": 2199,
-            "rank": 8345,
-            "rank_sort": 11268,
-            "overall_rank": 135207,
+            "points": 65,
+            "total_points": 2210,
+            "rank": 41886,
+            "rank_sort": 44449,
+            "overall_rank": 169537,
             "percentile_rank": 1,
             "bank": 9,
             "value": 1030,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 8
           }
         ]
       },
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Hawkansun",
-        "total": 2150,
-        "event_total": 12,
+        "total": 2166,
+        "event_total": 28,
         "entry": 1703536,
         "rank": 4,
         "history": [
@@ -2101,25 +2101,25 @@
           },
           {
             "event": 37,
-            "points": 12,
-            "total_points": 2150,
-            "rank": 5617993,
-            "rank_sort": 5678099,
-            "overall_rank": 379463,
-            "percentile_rank": 45,
+            "points": 28,
+            "total_points": 2166,
+            "rank": 4091508,
+            "rank_sort": 4103481,
+            "overall_rank": 409712,
+            "percentile_rank": 35,
             "bank": 1,
             "value": 1037,
             "event_transfers": 1,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 9
           }
         ]
       },
       {
         "player_name": "August Bång",
         "entry_name": "Club de national",
-        "total": 2143,
-        "event_total": 0,
+        "total": 2157,
+        "event_total": 14,
         "entry": 2373878,
         "rank": 5,
         "history": [
@@ -2629,25 +2629,25 @@
           },
           {
             "event": 37,
-            "points": 0,
-            "total_points": 2143,
-            "rank": 11839204,
-            "rank_sort": 12067148,
-            "overall_rank": 428364,
-            "percentile_rank": 95,
+            "points": 14,
+            "total_points": 2157,
+            "rank": 9813241,
+            "rank_sort": 9828125,
+            "overall_rank": 475535,
+            "percentile_rank": 80,
             "bank": 3,
             "value": 1045,
             "event_transfers": 1,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 7
           }
         ]
       },
       {
         "player_name": "Anton Ström",
         "entry_name": "Arnes Army",
-        "total": 2118,
-        "event_total": 15,
+        "total": 2147,
+        "event_total": 44,
         "entry": 159609,
         "rank": 6,
         "history": [
@@ -3157,12 +3157,12 @@
           },
           {
             "event": 37,
-            "points": 15,
-            "total_points": 2118,
-            "rank": 2608787,
-            "rank_sort": 2610887,
-            "overall_rank": 630388,
-            "percentile_rank": 25,
+            "points": 44,
+            "total_points": 2147,
+            "rank": 829578,
+            "rank_sort": 829936,
+            "overall_rank": 553418,
+            "percentile_rank": 10,
             "bank": 5,
             "value": 1005,
             "event_transfers": 1,
@@ -3174,8 +3174,8 @@
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Samlag1",
-        "total": 2117,
-        "event_total": 0,
+        "total": 2144,
+        "event_total": 27,
         "entry": 4000088,
         "rank": 7,
         "history": [
@@ -3685,25 +3685,25 @@
           },
           {
             "event": 37,
-            "points": 0,
-            "total_points": 2117,
-            "rank": 8885660,
-            "rank_sort": 9697918,
-            "overall_rank": 637810,
-            "percentile_rank": 70,
+            "points": 27,
+            "total_points": 2144,
+            "rank": 4171974,
+            "rank_sort": 4246794,
+            "overall_rank": 577177,
+            "percentile_rank": 35,
             "bank": 19,
             "value": 1037,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 2
+            "points_on_bench": 5
           }
         ]
       },
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "Hammarström FC",
-        "total": 2083,
-        "event_total": 2,
+        "total": 2093,
+        "event_total": 12,
         "entry": 240747,
         "rank": 8,
         "history": [
@@ -4213,25 +4213,25 @@
           },
           {
             "event": 37,
-            "points": 2,
-            "total_points": 2083,
-            "rank": 8016895,
-            "rank_sort": 8018016,
-            "overall_rank": 1005358,
-            "percentile_rank": 65,
+            "points": 12,
+            "total_points": 2093,
+            "rank": 10556831,
+            "rank_sort": 10557744,
+            "overall_rank": 1125560,
+            "percentile_rank": 85,
             "bank": 14,
             "value": 1027,
             "event_transfers": 1,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 2
           }
         ]
       },
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Mudryks monsters",
-        "total": 1995,
-        "event_total": 0,
+        "total": 2024,
+        "event_total": 29,
         "entry": 2571381,
         "rank": 9,
         "history": [
@@ -4741,17 +4741,17 @@
           },
           {
             "event": 37,
-            "points": 0,
-            "total_points": 1995,
-            "rank": 12873403,
-            "rank_sort": 12887630,
-            "overall_rank": 2336778,
-            "percentile_rank": 100,
+            "points": 29,
+            "total_points": 2024,
+            "rank": 3841475,
+            "rank_sort": 3842316,
+            "overall_rank": 2155185,
+            "percentile_rank": 30,
             "bank": 0,
             "value": 1027,
             "event_transfers": 4,
             "event_transfers_cost": 4,
-            "points_on_bench": 1
+            "points_on_bench": 10
           }
         ]
       }
@@ -4784,8 +4784,8 @@
     },
     {
       "gameweek": 37,
-      "loser": "Fredrik Lillbäck",
-      "points": 0,
+      "loser": "Jakob Hammarström",
+      "points": 12,
       "swishAmount": 30
     }
   ]
