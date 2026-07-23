@@ -1,10 +1,12 @@
 {
-  "last_updated": "2026-07-23T12:57:39.629Z",
+  "last_updated": "2026-07-23T15:10:39.062Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
       {
         "player_name": "Anton Ström",
+        "entry_name": "retribution �",
+        "total": null,
         "event_total": 0,
         "entry": 159609,
         "rank": 1,
@@ -12,6 +14,8 @@
       },
       {
         "player_name": "Jakob Hammarström",
+        "entry_name": "abujawad1948",
+        "total": null,
         "event_total": 0,
         "entry": 240747,
         "rank": 2,
