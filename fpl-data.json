@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T10:25:52.131Z",
+  "last_updated": "2026-07-27T13:24:41.676Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
@@ -32,6 +32,8 @@
       },
       {
         "player_name": "Elias Håkansson",
+        "entry_name": "Pending Moderation",
+        "total": null,
         "event_total": 0,
         "entry": 1703536,
         "rank": 4,
