@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31T15:16:25.262Z",
+  "last_updated": "2026-07-31T17:02:56.680Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
@@ -41,6 +41,8 @@
       },
       {
         "player_name": "August Bång",
+        "entry_name": "Ricardo23",
+        "total": null,
         "event_total": 0,
         "entry": 2373878,
         "rank": 5,
