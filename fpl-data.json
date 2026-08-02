@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-02T07:22:05.033Z",
+  "last_updated": "2026-08-02T09:32:23.702Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
@@ -50,6 +50,8 @@
       },
       {
         "player_name": "Sebastian Bonasoni",
+        "entry_name": "Autowin",
+        "total": null,
         "event_total": 0,
         "entry": 2571381,
         "rank": 6,
