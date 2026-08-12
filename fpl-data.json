@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12T12:08:16.350Z",
+  "last_updated": "2026-08-12T13:55:24.239Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
@@ -59,6 +59,8 @@
       },
       {
         "player_name": "Samuel Rosqvist",
+        "entry_name": "Pipo",
+        "total": null,
         "event_total": 0,
         "entry": 4000088,
         "rank": 7,
