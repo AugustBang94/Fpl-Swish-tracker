@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18T02:34:07.638Z",
+  "last_updated": "2026-08-18T03:41:07.457Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
@@ -77,6 +77,8 @@
       },
       {
         "player_name": "Oscar Jonsson",
+        "entry_name": "Owen's Team",
+        "total": null,
         "event_total": 0,
         "entry": 5475077,
         "rank": 9,
