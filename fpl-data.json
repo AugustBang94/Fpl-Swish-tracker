@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-21T20:21:52.637Z",
+  "last_updated": "2026-08-21T20:48:53.929Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
@@ -29,11 +29,11 @@
         ]
       },
       {
-        "player_name": "Jakob Hammarström",
-        "entry_name": "abujawad1948",
-        "total": 15,
+        "player_name": "August Bång",
+        "entry_name": "Ricardo23",
+        "total": 16,
         "event_total": 0,
-        "entry": 240747,
+        "entry": 2373878,
         "rank": 2,
         "history": [
           {
@@ -54,11 +54,11 @@
         ]
       },
       {
-        "player_name": "August Bång",
-        "entry_name": "Ricardo23",
+        "player_name": "Jakob Hammarström",
+        "entry_name": "abujawad1948",
         "total": 15,
         "event_total": 0,
-        "entry": 2373878,
+        "entry": 240747,
         "rank": 3,
         "history": [
           {
