@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-08-21T18:32:03.974Z",
+  "last_updated": "2026-08-21T19:23:14.798Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
       {
-        "player_name": "Anton Ström",
-        "entry_name": "retribution �",
-        "total": 0,
+        "player_name": "Jakob Hammarström",
+        "entry_name": "abujawad1948",
+        "total": 5,
         "event_total": 0,
-        "entry": 159609,
+        "entry": 240747,
         "rank": 1,
         "history": [
           {
@@ -29,12 +29,162 @@
         ]
       },
       {
-        "player_name": "Jakob Hammarström",
-        "entry_name": "abujawad1948",
-        "total": 0,
+        "player_name": "August Bång",
+        "entry_name": "Ricardo23",
+        "total": 5,
         "event_total": 0,
-        "entry": 240747,
+        "entry": 2373878,
         "rank": 2,
+        "history": [
+          {
+            "event": 1,
+            "points": 0,
+            "total_points": 0,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": null,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Sebastian Bonasoni",
+        "entry_name": "Autowin",
+        "total": 5,
+        "event_total": 0,
+        "entry": 2571381,
+        "rank": 3,
+        "history": [
+          {
+            "event": 1,
+            "points": 0,
+            "total_points": 0,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": null,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Samuel Rosqvist",
+        "entry_name": "Pipo",
+        "total": 5,
+        "event_total": 0,
+        "entry": 4000088,
+        "rank": 4,
+        "history": [
+          {
+            "event": 1,
+            "points": 0,
+            "total_points": 0,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": null,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Emil Jönsson",
+        "entry_name": "Arystan",
+        "total": 5,
+        "event_total": 0,
+        "entry": 4915802,
+        "rank": 5,
+        "history": [
+          {
+            "event": 1,
+            "points": 0,
+            "total_points": 0,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": null,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Anton Ström",
+        "entry_name": "retribution �",
+        "total": 3,
+        "event_total": 0,
+        "entry": 159609,
+        "rank": 6,
+        "history": [
+          {
+            "event": 1,
+            "points": 0,
+            "total_points": 0,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": null,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Elias Håkansson",
+        "entry_name": "Restored",
+        "total": 2,
+        "event_total": 0,
+        "entry": 1703536,
+        "rank": 7,
+        "history": [
+          {
+            "event": 1,
+            "points": 0,
+            "total_points": 0,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": null,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Oscar Jonsson",
+        "entry_name": "Owen's Team",
+        "total": 1,
+        "event_total": 0,
+        "entry": 5475077,
+        "rank": 8,
         "history": [
           {
             "event": 1,
@@ -59,156 +209,6 @@
         "total": 0,
         "event_total": 0,
         "entry": 1102453,
-        "rank": 3,
-        "history": [
-          {
-            "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": null,
-            "percentile_rank": null,
-            "overall_rank_percentage": null,
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
-        "player_name": "Elias Håkansson",
-        "entry_name": "Restored",
-        "total": 0,
-        "event_total": 0,
-        "entry": 1703536,
-        "rank": 4,
-        "history": [
-          {
-            "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": null,
-            "percentile_rank": null,
-            "overall_rank_percentage": null,
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
-        "player_name": "August Bång",
-        "entry_name": "Ricardo23",
-        "total": 0,
-        "event_total": 0,
-        "entry": 2373878,
-        "rank": 5,
-        "history": [
-          {
-            "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": null,
-            "percentile_rank": null,
-            "overall_rank_percentage": null,
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
-        "player_name": "Sebastian Bonasoni",
-        "entry_name": "Autowin",
-        "total": 0,
-        "event_total": 0,
-        "entry": 2571381,
-        "rank": 6,
-        "history": [
-          {
-            "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": null,
-            "percentile_rank": null,
-            "overall_rank_percentage": null,
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
-        "player_name": "Samuel Rosqvist",
-        "entry_name": "Pipo",
-        "total": 0,
-        "event_total": 0,
-        "entry": 4000088,
-        "rank": 7,
-        "history": [
-          {
-            "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": null,
-            "percentile_rank": null,
-            "overall_rank_percentage": null,
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
-        "player_name": "Emil Jönsson",
-        "entry_name": "Arystan",
-        "total": 0,
-        "event_total": 0,
-        "entry": 4915802,
-        "rank": 8,
-        "history": [
-          {
-            "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": null,
-            "rank_sort": null,
-            "overall_rank": null,
-            "percentile_rank": null,
-            "overall_rank_percentage": null,
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
-        "player_name": "Oscar Jonsson",
-        "entry_name": "Owen's Team",
-        "total": 0,
-        "event_total": 0,
-        "entry": 5475077,
         "rank": 9,
         "history": [
           {
