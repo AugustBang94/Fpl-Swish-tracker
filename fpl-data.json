@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-21T16:00:02.730Z",
+  "last_updated": "2026-08-21T16:43:19.001Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
       {
         "player_name": "Anton Ström",
         "entry_name": "retribution �",
-        "total": 0,
+        "total": null,
         "event_total": 0,
         "entry": 159609,
         "rank": 1,
