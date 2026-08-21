@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-21T13:41:46.781Z",
+  "last_updated": "2026-08-21T14:31:18.010Z",
   "current_gameweek": 5,
   "standings": {
     "results": [
       {
         "player_name": "Anton Ström",
         "entry_name": "retribution �",
-        "total": 0,
+        "total": null,
         "event_total": 0,
         "entry": 159609,
         "rank": 1,
@@ -60,7 +60,7 @@
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 0,
+        "total": null,
         "event_total": 0,
         "entry": 4000088,
         "rank": 7,
