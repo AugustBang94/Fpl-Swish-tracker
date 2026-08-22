@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-22T20:01:05.181Z",
+  "last_updated": "2026-08-22T20:35:25.805Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
@@ -13,13 +13,13 @@
         "history": [
           {
             "event": 1,
-            "points": 17,
-            "total_points": 17,
-            "rank": 2147459,
-            "rank_sort": 2154446,
-            "overall_rank": 2147456,
-            "percentile_rank": 25,
-            "overall_rank_percentage": "24",
+            "points": 49,
+            "total_points": 49,
+            "rank": 91425,
+            "rank_sort": 92846,
+            "overall_rank": 91425,
+            "percentile_rank": 5,
+            "overall_rank_percentage": "1",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
@@ -38,13 +38,13 @@
         "history": [
           {
             "event": 1,
-            "points": 15,
-            "total_points": 15,
-            "rank": 2683418,
-            "rank_sort": 3248282,
-            "overall_rank": 2683415,
-            "percentile_rank": 35,
-            "overall_rank_percentage": "30",
+            "points": 40,
+            "total_points": 40,
+            "rank": 478915,
+            "rank_sort": 518305,
+            "overall_rank": 478912,
+            "percentile_rank": 10,
+            "overall_rank_percentage": "5",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
@@ -63,18 +63,18 @@
         "history": [
           {
             "event": 1,
-            "points": 15,
-            "total_points": 15,
-            "rank": 2683418,
-            "rank_sort": 2739843,
-            "overall_rank": 2683415,
-            "percentile_rank": 35,
-            "overall_rank_percentage": "30",
+            "points": 32,
+            "total_points": 32,
+            "rank": 1502545,
+            "rank_sort": 1510040,
+            "overall_rank": 1502541,
+            "percentile_rank": 20,
+            "overall_rank_percentage": "17",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 1
+            "points_on_bench": 5
           }
         ]
       },
@@ -88,18 +88,18 @@
         "history": [
           {
             "event": 1,
-            "points": 6,
-            "total_points": 6,
-            "rank": 6699479,
-            "rank_sort": 7111897,
-            "overall_rank": 6699465,
-            "percentile_rank": 80,
-            "overall_rank_percentage": "75",
+            "points": 27,
+            "total_points": 27,
+            "rank": 2741476,
+            "rank_sort": 2928760,
+            "overall_rank": 2741472,
+            "percentile_rank": 35,
+            "overall_rank_percentage": "31",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 10
           }
         ]
       },
@@ -113,13 +113,13 @@
         "history": [
           {
             "event": 1,
-            "points": 10,
-            "total_points": 10,
-            "rank": 5327579,
-            "rank_sort": 5354437,
-            "overall_rank": 5327569,
-            "percentile_rank": 60,
-            "overall_rank_percentage": "60",
+            "points": 26,
+            "total_points": 26,
+            "rank": 3055809,
+            "rank_sort": 3147425,
+            "overall_rank": 3055805,
+            "percentile_rank": 35,
+            "overall_rank_percentage": "34",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
@@ -138,18 +138,18 @@
         "history": [
           {
             "event": 1,
-            "points": 16,
-            "total_points": 16,
-            "rank": 2560856,
-            "rank_sort": 2590218,
-            "overall_rank": 2560853,
-            "percentile_rank": 30,
-            "overall_rank_percentage": "29",
+            "points": 23,
+            "total_points": 23,
+            "rank": 4091855,
+            "rank_sort": 4186391,
+            "overall_rank": 4091852,
+            "percentile_rank": 50,
+            "overall_rank_percentage": "46",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 1
+            "points_on_bench": 12
           }
         ]
       },
@@ -163,18 +163,18 @@
         "history": [
           {
             "event": 1,
-            "points": 15,
-            "total_points": 15,
-            "rank": 2683418,
-            "rank_sort": 3352295,
-            "overall_rank": 2683415,
-            "percentile_rank": 35,
-            "overall_rank_percentage": "30",
+            "points": 21,
+            "total_points": 21,
+            "rank": 4831292,
+            "rank_sort": 5028977,
+            "overall_rank": 4831287,
+            "percentile_rank": 55,
+            "overall_rank_percentage": "54",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 3
           }
         ]
       },
@@ -188,18 +188,18 @@
         "history": [
           {
             "event": 1,
-            "points": 0,
-            "total_points": 0,
-            "rank": 8198545,
-            "rank_sort": 8275135,
-            "overall_rank": 8198522,
-            "percentile_rank": 95,
-            "overall_rank_percentage": "92",
+            "points": 18,
+            "total_points": 18,
+            "rank": 5918730,
+            "rank_sort": 5951381,
+            "overall_rank": 5918724,
+            "percentile_rank": 70,
+            "overall_rank_percentage": "66",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 5
           }
         ]
       },
@@ -215,16 +215,16 @@
             "event": 1,
             "points": 8,
             "total_points": 8,
-            "rank": 6432063,
-            "rank_sort": 6459302,
-            "overall_rank": 6432050,
-            "percentile_rank": 75,
-            "overall_rank_percentage": "72",
+            "rank": 8439562,
+            "rank_sort": 8458234,
+            "overall_rank": 8439554,
+            "percentile_rank": 95,
+            "overall_rank_percentage": "95",
             "bank": 0,
             "value": 1000,
             "event_transfers": 0,
             "event_transfers_cost": 0,
-            "points_on_bench": 0
+            "points_on_bench": 5
           }
         ]
       }
