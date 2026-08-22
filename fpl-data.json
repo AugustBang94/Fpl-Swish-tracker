@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-22T16:22:01.658Z",
+  "last_updated": "2026-08-22T16:49:21.857Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
@@ -31,7 +31,7 @@
       {
         "player_name": "Anton Ström",
         "entry_name": "retribution �",
-        "total": 35,
+        "total": 37,
         "event_total": 17,
         "entry": 159609,
         "rank": 2,
@@ -81,7 +81,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 26,
+        "total": 27,
         "event_total": 10,
         "entry": 2571381,
         "rank": 4,
@@ -106,7 +106,7 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 24,
+        "total": 25,
         "event_total": 6,
         "entry": 5475077,
         "rank": 5,
