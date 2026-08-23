@@ -1,40 +1,15 @@
 {
-  "last_updated": "2026-08-23T15:29:30.807Z",
+  "last_updated": "2026-08-23T15:50:09.114Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
       {
-        "player_name": "Anton Ström",
-        "entry_name": "retribution �",
-        "total": 48,
-        "event_total": 49,
-        "entry": 159609,
-        "rank": 1,
-        "history": [
-          {
-            "event": 1,
-            "points": 49,
-            "total_points": 49,
-            "rank": 91425,
-            "rank_sort": 92846,
-            "overall_rank": 91425,
-            "percentile_rank": 5,
-            "overall_rank_percentage": "1",
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 48,
+        "total": 50,
         "event_total": 40,
         "entry": 4000088,
-        "rank": 2,
+        "rank": 1,
         "history": [
           {
             "event": 1,
@@ -54,12 +29,62 @@
         ]
       },
       {
+        "player_name": "Anton Ström",
+        "entry_name": "retribution �",
+        "total": 49,
+        "event_total": 49,
+        "entry": 159609,
+        "rank": 2,
+        "history": [
+          {
+            "event": 1,
+            "points": 49,
+            "total_points": 49,
+            "rank": 91425,
+            "rank_sort": 92846,
+            "overall_rank": 91425,
+            "percentile_rank": 5,
+            "overall_rank_percentage": "1",
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
+        "player_name": "Sebastian Bonasoni",
+        "entry_name": "Autowin",
+        "total": 39,
+        "event_total": 26,
+        "entry": 2571381,
+        "rank": 3,
+        "history": [
+          {
+            "event": 1,
+            "points": 26,
+            "total_points": 26,
+            "rank": 3055809,
+            "rank_sort": 3147425,
+            "overall_rank": 3055805,
+            "percentile_rank": 35,
+            "overall_rank_percentage": "34",
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
+          }
+        ]
+      },
+      {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
         "total": 39,
         "event_total": 27,
         "entry": 5475077,
-        "rank": 3,
+        "rank": 4,
         "history": [
           {
             "event": 1,
@@ -84,7 +109,7 @@
         "total": 38,
         "event_total": 32,
         "entry": 240747,
-        "rank": 4,
+        "rank": 5,
         "history": [
           {
             "event": 1,
@@ -104,34 +129,9 @@
         ]
       },
       {
-        "player_name": "Sebastian Bonasoni",
-        "entry_name": "Autowin",
-        "total": 37,
-        "event_total": 26,
-        "entry": 2571381,
-        "rank": 5,
-        "history": [
-          {
-            "event": 1,
-            "points": 26,
-            "total_points": 26,
-            "rank": 3055809,
-            "rank_sort": 3147425,
-            "overall_rank": 3055805,
-            "percentile_rank": 35,
-            "overall_rank_percentage": "34",
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 29,
+        "total": 30,
         "event_total": 23,
         "entry": 2373878,
         "rank": 6,
@@ -181,7 +181,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 23,
+        "total": 24,
         "event_total": 8,
         "entry": 1703536,
         "rank": 8,
