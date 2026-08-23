@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-23T14:58:41.441Z",
+  "last_updated": "2026-08-23T15:29:30.807Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
@@ -206,7 +206,7 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 22,
+        "total": 21,
         "event_total": 18,
         "entry": 1102453,
         "rank": 9,
