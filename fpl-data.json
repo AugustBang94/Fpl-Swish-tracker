@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-23T13:18:28.190Z",
+  "last_updated": "2026-08-23T13:49:00.164Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
@@ -56,7 +56,7 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 35,
+        "total": 34,
         "event_total": 32,
         "entry": 240747,
         "rank": 3,
@@ -181,7 +181,7 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 22,
+        "total": 19,
         "event_total": 18,
         "entry": 1102453,
         "rank": 8,
