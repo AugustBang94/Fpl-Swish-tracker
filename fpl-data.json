@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-23T13:49:00.164Z",
+  "last_updated": "2026-08-23T14:09:50.191Z",
   "current_gameweek": 1,
   "standings": {
     "results": [
@@ -79,37 +79,12 @@
         ]
       },
       {
-        "player_name": "Sebastian Bonasoni",
-        "entry_name": "Autowin",
-        "total": 29,
-        "event_total": 26,
-        "entry": 2571381,
-        "rank": 4,
-        "history": [
-          {
-            "event": 1,
-            "points": 26,
-            "total_points": 26,
-            "rank": 3055809,
-            "rank_sort": 3147425,
-            "overall_rank": 3055805,
-            "percentile_rank": 35,
-            "overall_rank_percentage": "34",
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 0
-          }
-        ]
-      },
-      {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 29,
+        "total": 31,
         "event_total": 27,
         "entry": 5475077,
-        "rank": 5,
+        "rank": 4,
         "history": [
           {
             "event": 1,
@@ -125,6 +100,31 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 10
+          }
+        ]
+      },
+      {
+        "player_name": "Sebastian Bonasoni",
+        "entry_name": "Autowin",
+        "total": 29,
+        "event_total": 26,
+        "entry": 2571381,
+        "rank": 5,
+        "history": [
+          {
+            "event": 1,
+            "points": 26,
+            "total_points": 26,
+            "rank": 3055809,
+            "rank_sort": 3147425,
+            "overall_rank": 3055805,
+            "percentile_rank": 35,
+            "overall_rank_percentage": "34",
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
@@ -206,7 +206,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 10,
+        "total": 12,
         "event_total": 8,
         "entry": 1703536,
         "rank": 9,
