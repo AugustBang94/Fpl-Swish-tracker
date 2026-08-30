@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-30T07:22:37.106Z",
+  "last_updated": "2026-08-30T13:07:34.484Z",
   "current_gameweek": 2,
   "standings": {
     "results": [
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 99,
+        "total": 101,
         "event_total": 30,
         "entry": 4000088,
         "rank": 1,
@@ -46,7 +46,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 85,
+        "total": 88,
         "event_total": 19,
         "entry": 2571381,
         "rank": 2,
@@ -84,52 +84,12 @@
         ]
       },
       {
-        "player_name": "August Bång",
-        "entry_name": "Ricardo23",
-        "total": 73,
-        "event_total": 36,
-        "entry": 2373878,
-        "rank": 3,
-        "history": [
-          {
-            "event": 1,
-            "points": 37,
-            "total_points": 37,
-            "rank": 7658243,
-            "rank_sort": 7694742,
-            "overall_rank": 7658231,
-            "percentile_rank": 90,
-            "overall_rank_percentage": "86",
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 12
-          },
-          {
-            "event": 2,
-            "points": 36,
-            "total_points": 73,
-            "rank": 2797516,
-            "rank_sort": 2844607,
-            "overall_rank": 5531784,
-            "percentile_rank": 30,
-            "overall_rank_percentage": "56",
-            "bank": 0,
-            "value": 1001,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 2
-          }
-        ]
-      },
-      {
         "player_name": "Anton Ström",
         "entry_name": "retribution �",
-        "total": 71,
+        "total": 77,
         "event_total": 4,
         "entry": 159609,
-        "rank": 4,
+        "rank": 3,
         "history": [
           {
             "event": 1,
@@ -164,12 +124,92 @@
         ]
       },
       {
+        "player_name": "August Bång",
+        "entry_name": "Ricardo23",
+        "total": 73,
+        "event_total": 36,
+        "entry": 2373878,
+        "rank": 4,
+        "history": [
+          {
+            "event": 1,
+            "points": 37,
+            "total_points": 37,
+            "rank": 7658243,
+            "rank_sort": 7694742,
+            "overall_rank": 7658231,
+            "percentile_rank": 90,
+            "overall_rank_percentage": "86",
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 12
+          },
+          {
+            "event": 2,
+            "points": 36,
+            "total_points": 73,
+            "rank": 2797516,
+            "rank_sort": 2844607,
+            "overall_rank": 5531784,
+            "percentile_rank": 30,
+            "overall_rank_percentage": "56",
+            "bank": 0,
+            "value": 1001,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 2
+          }
+        ]
+      },
+      {
+        "player_name": "Emil Jönsson",
+        "entry_name": "Arystan",
+        "total": 72,
+        "event_total": 17,
+        "entry": 4915802,
+        "rank": 5,
+        "history": [
+          {
+            "event": 1,
+            "points": 50,
+            "total_points": 50,
+            "rank": 4383530,
+            "rank_sort": 4540505,
+            "overall_rank": 4383525,
+            "percentile_rank": 50,
+            "overall_rank_percentage": "49",
+            "bank": 0,
+            "value": 1000,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 4
+          },
+          {
+            "event": 2,
+            "points": 17,
+            "total_points": 67,
+            "rank": 8102506,
+            "rank_sort": 8142914,
+            "overall_rank": 6738696,
+            "percentile_rank": 85,
+            "overall_rank_percentage": "68",
+            "bank": 0,
+            "value": 1001,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 2
+          }
+        ]
+      },
+      {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 68,
+        "total": 71,
         "event_total": 19,
         "entry": 240747,
-        "rank": 5,
+        "rank": 6,
         "history": [
           {
             "event": 1,
@@ -206,10 +246,10 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 68,
+        "total": 71,
         "event_total": 9,
         "entry": 5475077,
-        "rank": 6,
+        "rank": 7,
         "history": [
           {
             "event": 1,
@@ -244,49 +284,9 @@
         ]
       },
       {
-        "player_name": "Emil Jönsson",
-        "entry_name": "Arystan",
-        "total": 67,
-        "event_total": 17,
-        "entry": 4915802,
-        "rank": 7,
-        "history": [
-          {
-            "event": 1,
-            "points": 50,
-            "total_points": 50,
-            "rank": 4383530,
-            "rank_sort": 4540505,
-            "overall_rank": 4383525,
-            "percentile_rank": 50,
-            "overall_rank_percentage": "49",
-            "bank": 0,
-            "value": 1000,
-            "event_transfers": 0,
-            "event_transfers_cost": 0,
-            "points_on_bench": 4
-          },
-          {
-            "event": 2,
-            "points": 17,
-            "total_points": 67,
-            "rank": 8102506,
-            "rank_sort": 8142914,
-            "overall_rank": 6738696,
-            "percentile_rank": 85,
-            "overall_rank_percentage": "68",
-            "bank": 0,
-            "value": 1001,
-            "event_transfers": 1,
-            "event_transfers_cost": 0,
-            "points_on_bench": 2
-          }
-        ]
-      },
-      {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 46,
+        "total": 49,
         "event_total": 22,
         "entry": 1102453,
         "rank": 8,
@@ -326,7 +326,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 46,
+        "total": 47,
         "event_total": 5,
         "entry": 1703536,
         "rank": 9,
