@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-31T22:25:33.054Z",
+  "last_updated": "2026-09-01T01:20:57.589Z",
   "current_gameweek": 2,
   "standings": {
     "results": [
@@ -326,7 +326,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 58,
+        "total": 60,
         "event_total": 17,
         "entry": 1703536,
         "rank": 9,
