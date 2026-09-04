@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-09-04T18:47:49.770Z",
+  "last_updated": "2026-09-04T21:13:28.082Z",
   "current_gameweek": 3,
   "standings": {
     "results": [
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 209,
+        "total": 225,
         "event_total": 0,
         "entry": 4000088,
         "rank": 1,
@@ -116,7 +116,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 160,
+        "total": 176,
         "event_total": 0,
         "entry": 2571381,
         "rank": 3,
@@ -171,7 +171,7 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 151,
+        "total": 164,
         "event_total": 0,
         "entry": 5475077,
         "rank": 4,
@@ -391,7 +391,7 @@
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 118,
+        "total": 121,
         "event_total": 0,
         "entry": 2373878,
         "rank": 8,
@@ -446,7 +446,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 91,
+        "total": 94,
         "event_total": 0,
         "entry": 1703536,
         "rank": 9,
