@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-05T16:42:49.091Z",
+  "last_updated": "2026-09-05T18:35:34.366Z",
   "current_gameweek": 3,
   "standings": {
     "results": [
@@ -116,7 +116,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 205,
+        "total": 209,
         "event_total": 16,
         "entry": 2571381,
         "rank": 3,
@@ -391,7 +391,7 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 148,
+        "total": 155,
         "event_total": 0,
         "entry": 1102453,
         "rank": 8,
