@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T15:57:05.499Z",
+  "last_updated": "2026-09-14T20:11:07.092Z",
   "current_gameweek": 4,
   "standings": {
     "results": [
@@ -76,7 +76,7 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 304,
+        "total": 314,
         "event_total": 81,
         "entry": 240747,
         "rank": 2,
@@ -426,7 +426,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 217,
+        "total": 227,
         "event_total": 77,
         "entry": 1703536,
         "rank": 7,
@@ -496,7 +496,7 @@
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 215,
+        "total": 221,
         "event_total": 39,
         "entry": 2373878,
         "rank": 8,
