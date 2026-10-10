@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10T15:57:44.289Z",
+  "last_updated": "2026-10-10T19:56:24.568Z",
   "current_gameweek": 6,
   "standings": {
     "results": [
@@ -106,7 +106,7 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 410,
+        "total": 413,
         "event_total": 0,
         "entry": 240747,
         "rank": 2,
@@ -206,7 +206,7 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 373,
+        "total": 383,
         "event_total": 0,
         "entry": 5475077,
         "rank": 3,
@@ -306,7 +306,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 372,
+        "total": 381,
         "event_total": 0,
         "entry": 2571381,
         "rank": 4,
@@ -506,7 +506,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 334,
+        "total": 345,
         "event_total": 0,
         "entry": 1703536,
         "rank": 6,
@@ -706,7 +706,7 @@
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 293,
+        "total": 301,
         "event_total": 0,
         "entry": 2373878,
         "rank": 8,
@@ -806,7 +806,7 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 272,
+        "total": 282,
         "event_total": 0,
         "entry": 1102453,
         "rank": 9,
