@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-19T16:34:14.317Z",
+  "last_updated": "2026-10-19T21:19:35.634Z",
   "current_gameweek": 7,
   "standings": {
     "results": [
@@ -236,7 +236,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 446,
+        "total": 455,
         "event_total": 56,
         "entry": 2571381,
         "rank": 3,
@@ -581,7 +581,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 433,
+        "total": 437,
         "event_total": 65,
         "entry": 1703536,
         "rank": 6,
