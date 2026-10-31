@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-10-31T10:27:45.129Z",
-  "current_gameweek": 8,
+  "last_updated": "2026-10-31T15:50:02.430Z",
+  "current_gameweek": 9,
   "standings": {
     "results": [
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 603,
-        "event_total": 44,
+        "total": 634,
+        "event_total": 0,
         "entry": 4000088,
         "rank": 1,
         "history": [
@@ -130,14 +130,29 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 3
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 603,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 5825,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 2,
+            "value": 1024,
+            "event_transfers": 2,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 541,
-        "event_total": 46,
+        "total": 562,
+        "event_total": 0,
         "entry": 240747,
         "rank": 2,
         "history": [
@@ -260,14 +275,29 @@
             "event_transfers": 1,
             "event_transfers_cost": 0,
             "points_on_bench": 0
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 541,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 567103,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 32,
+            "value": 1015,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 510,
-        "event_total": 53,
+        "total": 527,
+        "event_total": 0,
         "entry": 2571381,
         "rank": 3,
         "history": [
@@ -390,14 +420,29 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 2
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 510,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 1739587,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 1,
+            "value": 1020,
+            "event_transfers": 2,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Emil Jönsson",
         "entry_name": "Arystan",
-        "total": 493,
-        "event_total": 47,
+        "total": 501,
+        "event_total": 0,
         "entry": 4915802,
         "rank": 4,
         "history": [
@@ -520,14 +565,29 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 3
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 493,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 2727014,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 4,
+            "value": 1024,
+            "event_transfers": 4,
+            "event_transfers_cost": 4,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 477,
-        "event_total": 37,
+        "total": 494,
+        "event_total": 0,
         "entry": 5475077,
         "rank": 5,
         "history": [
@@ -650,14 +710,29 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 12
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 477,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 3699258,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 1003,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 476,
-        "event_total": 33,
+        "total": 484,
+        "event_total": 0,
         "entry": 1703536,
         "rank": 6,
         "history": [
@@ -780,14 +855,29 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 7
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 476,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 3735511,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 1,
+            "value": 1007,
+            "event_transfers": 5,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Anton Ström",
         "entry_name": "retribution �",
-        "total": 432,
-        "event_total": 34,
+        "total": 452,
+        "event_total": 0,
         "entry": 159609,
         "rank": 7,
         "history": [
@@ -910,14 +1000,29 @@
             "event_transfers": 1,
             "event_transfers_cost": 0,
             "points_on_bench": 6
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 432,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 6519544,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 44,
+            "value": 1018,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 422,
-        "event_total": 46,
+        "total": 434,
+        "event_total": 0,
         "entry": 1102453,
         "rank": 8,
         "history": [
@@ -1040,14 +1145,29 @@
             "event_transfers": 1,
             "event_transfers_cost": 0,
             "points_on_bench": 15
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 422,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 7068123,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 999,
+            "event_transfers": 1,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       },
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 402,
-        "event_total": 30,
+        "total": 410,
+        "event_total": 0,
         "entry": 2373878,
         "rank": 9,
         "history": [
@@ -1170,6 +1290,21 @@
             "event_transfers": 0,
             "event_transfers_cost": 0,
             "points_on_bench": 2
+          },
+          {
+            "event": 9,
+            "points": 0,
+            "total_points": 402,
+            "rank": null,
+            "rank_sort": null,
+            "overall_rank": 7964716,
+            "percentile_rank": null,
+            "overall_rank_percentage": null,
+            "bank": 0,
+            "value": 989,
+            "event_transfers": 0,
+            "event_transfers_cost": 0,
+            "points_on_bench": 0
           }
         ]
       }
@@ -1201,9 +1336,9 @@
       "swishAmount": 30
     },
     {
-      "gameweek": 8,
-      "loser": "August Bång",
-      "points": 30,
+      "gameweek": 9,
+      "loser": "Anton Ström",
+      "points": 0,
       "swishAmount": 30
     }
   ]
