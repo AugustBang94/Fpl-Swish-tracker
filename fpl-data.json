@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-10-31T19:35:21.102Z",
+  "last_updated": "2026-10-31T22:48:30.359Z",
   "current_gameweek": 9,
   "standings": {
     "results": [
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 647,
+        "total": 663,
         "event_total": 0,
         "entry": 4000088,
         "rank": 1,
@@ -151,7 +151,7 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 570,
+        "total": 579,
         "event_total": 0,
         "entry": 240747,
         "rank": 2,
@@ -586,7 +586,7 @@
       {
         "player_name": "Emil Jönsson",
         "entry_name": "Arystan",
-        "total": 507,
+        "total": 516,
         "event_total": 0,
         "entry": 4915802,
         "rank": 5,
