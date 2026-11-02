@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-01T23:03:13.443Z",
+  "last_updated": "2026-11-02T02:25:15.993Z",
   "current_gameweek": 9,
   "standings": {
     "results": [
@@ -151,7 +151,7 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 602,
+        "total": 600,
         "event_total": 61,
         "entry": 240747,
         "rank": 2,
@@ -731,7 +731,7 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 513,
+        "total": 511,
         "event_total": 36,
         "entry": 5475077,
         "rank": 6,
@@ -1166,7 +1166,7 @@
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 428,
+        "total": 426,
         "event_total": 26,
         "entry": 2373878,
         "rank": 9,
