@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-07T11:21:55.974Z",
+  "last_updated": "2026-11-07T16:56:56.085Z",
   "current_gameweek": 10,
   "standings": {
     "results": [
       {
         "player_name": "Samuel Rosqvist",
         "entry_name": "Pipo",
-        "total": 682,
+        "total": 702,
         "event_total": 0,
         "entry": 4000088,
         "rank": 1,
@@ -166,7 +166,7 @@
       {
         "player_name": "Jakob Hammarström",
         "entry_name": "abujawad1948",
-        "total": 600,
+        "total": 622,
         "event_total": 0,
         "entry": 240747,
         "rank": 2,
@@ -326,7 +326,7 @@
       {
         "player_name": "Emil Jönsson",
         "entry_name": "Arystan",
-        "total": 561,
+        "total": 575,
         "event_total": 11,
         "entry": 4915802,
         "rank": 3,
@@ -486,7 +486,7 @@
       {
         "player_name": "Elias Håkansson",
         "entry_name": "Restored",
-        "total": 549,
+        "total": 563,
         "event_total": 16,
         "entry": 1703536,
         "rank": 4,
@@ -646,7 +646,7 @@
       {
         "player_name": "Sebastian Bonasoni",
         "entry_name": "Autowin",
-        "total": 548,
+        "total": 558,
         "event_total": 1,
         "entry": 2571381,
         "rank": 5,
@@ -806,7 +806,7 @@
       {
         "player_name": "Oscar Jonsson",
         "entry_name": "Owen's Team",
-        "total": 520,
+        "total": 543,
         "event_total": 0,
         "entry": 5475077,
         "rank": 6,
@@ -966,7 +966,7 @@
       {
         "player_name": "Anton Ström",
         "entry_name": "retribution �",
-        "total": 474,
+        "total": 485,
         "event_total": 2,
         "entry": 159609,
         "rank": 7,
@@ -1126,7 +1126,7 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 467,
+        "total": 477,
         "event_total": 0,
         "entry": 1102453,
         "rank": 8,
@@ -1286,7 +1286,7 @@
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 441,
+        "total": 457,
         "event_total": 0,
         "entry": 2373878,
         "rank": 9,
