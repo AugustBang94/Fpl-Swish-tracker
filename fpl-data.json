@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-08T18:06:41.140Z",
+  "last_updated": "2026-11-08T21:58:42.744Z",
   "current_gameweek": 10,
   "standings": {
     "results": [
@@ -1126,7 +1126,7 @@
       {
         "player_name": "Fredrik Lillbäck",
         "entry_name": "Bruses",
-        "total": 524,
+        "total": 530,
         "event_total": 14,
         "entry": 1102453,
         "rank": 8,
@@ -1286,7 +1286,7 @@
       {
         "player_name": "August Bång",
         "entry_name": "Ricardo23",
-        "total": 482,
+        "total": 486,
         "event_total": 18,
         "entry": 2373878,
         "rank": 9,
